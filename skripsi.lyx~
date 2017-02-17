@@ -1,0 +1,2358 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+%% \renewcommand{\chapter}[1]{\chapter[#1]{\centering #1}}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{tocbibind}
+\usepackage{url}
+\usepackage[titletoc]{appendix}
+
+\definecolor{lineno}{rgb}{0.5,0.5,0.5}
+\definecolor{bcolor}{rgb}{0.98,0.98,0.98}
+\definecolor{code}{rgb}{0,0.1,0.6}
+
+\definecolor{codesty}{rgb}{0.7,0.1,0.1}
+\definecolor{commandsty}{rgb}{0.1,0.5,0.0}
+\definecolor{keywordsty}{rgb}{0.4,0.0,0.4}
+\definecolor{stringsty}{rgb}{1.0,0.5,0.0}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+
+\renewcommand{\contentsname}{Table of Contents}
+
+\newcommand{\Judul}{}
+\newcommand{\JudulInggris}{Plagiarism Detection of Java Source Code}
+\newcommand{\Name}{Ika Pretty Siregar}
+\newcommand{\NPM}{53411487}
+\newcommand{\NIRM}{}
+\newcommand{\JenisTulisan}{Undergraduate Thesis}
+%\newcommand{\Gelar}{Jenjang DIII / Setara Sarjana Muda}
+\newcommand{\Fakultas}{Faculty of Industrial Technology}
+\newcommand{\Department}{Informatics Engineering}
+%\newcommand{\Prodi}{Direktorat Program Diploma Tiga Teknologi Informasi}
+\newcommand{\Tahun}{2015}
+\newcommand{\Bulan}{February}
+\newcommand{\Tanggal}{27}
+\newcommand{\Kota}{Jakarta}
+\newcommand{\KataKunci}{Java, Plagiat Kode Sumber,  Levenshtein Distance, Deteksi Java }
+\newcommand{\KeyWords}{Java, Source Code Plagiarism, Levenshtein Distance, Detection Java}
+\newcommand{\KoordinatorPI}{}
+\newcommand{\KetuaJurusan}{Haryanto, SSi, MM}
+\newcommand{\Supervisor}{Dr. Lintang Yuniar Banowosari, S.Kom., M.Sc.}
+\newcommand{\AnggotaPembimbingA}{Dr. M. Subali}
+\newcommand{\Supervisors}{Dr. Lintang Yuniar Banowosari, S.Kom., M.Sc.}
+\newcommand{\AnggotaPembimbingB}{Dr. Ir. Hartono Siswono, MT}
+\newcommand{\AnggotaPembimbingC}{Dr. Sunny Arief Sudiro}
+\newcommand{\KetuaUjian}{Dr. Ravi Ahmad Salim}
+\newcommand{\SekUjian}{Prof.Dr. Wahyudi Priyono}
+\newcommand{\AnggotaUjianA}{Dr. Lintang Yuniar Banowosari, S.Kom., M.Sc.}
+\newcommand{\AnggotaUjianB}{Dr. M. Subali}
+\newcommand{\AnggotaUjianC}{Dr. Ir. Hartono Siswono, MT}
+\newcommand{\AnggotaUjianD}{Dr. Sunny Arief Sudiro}
+\newcommand{\Ringkasan}{Tulis ringkasan skripsi, pi, atau apa dengan bahasa yang jelas, lugas dan menggambarkan secara singkat tulisan ini.  Sebaiknya tidak lebih dari 150 kata dan sudah menjelaskan dari permasalahan, pembahasan dan penutup.}
+\newcommand{\JumlahPustaka}{- -}
+\newcommand{\JumlahHalaman}{64}
+\newcommand{\JumlahHalamanDepan}{xiv}
+\newcommand{\TahunPustaka}{1984-2014}
+%%
+%% Keterangan administratif sidang sarjana
+%%
+\newcommand{\TanggalSidang}{27 February 2015}
+\newcommand{\TanggalLulus}{27 February 2015}
+\newcommand{\TanggalSah}{27 February 2015}
+\newcommand{\PejabatBagianSidang}{Dr. Edi Sukirman, S.Si, MM}
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{Chapter  \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}{}}
+
+
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
+\fancyhead[LO]{\textit{\nouppercase{\rightmark}}}
+
+\fancypagestyle{plain}{ %
+\fancyhf{} % remove everything
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt} % remove lines as well
+\renewcommand{\footrulewidth}{0pt}}
+\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman charter
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement !tph
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\listings_params "backgroundcolor={\color{bcolor}},basicstyle={\ttfamily\small\color{codesty}},breaklines=true,commentstyle={\color{commandsty}},deletekeywords={alter},firstnumber=1,frame=tb,identifierstyle={\color{black}},keywordstyle={\color{blue}\bfseries},language=C,morekeywords={dosync,if},numberfirstline=true,numbers=left,numberstyle={\color{lineno}\sffamily\scriptsize},showspaces=false,showstringspaces=false,stringstyle={\itshape\color{stringsty}}"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+sloppy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{roman}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{10mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size huge
+GUNADARMA UNIVERSITY
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+MakeUppercase{
+\backslash
+Fakultas}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{10mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename D:/Media Pembelajaran/UNIVERSITAS/xSkripsix/SKRIPSI/Lyx Jefri/img/LogoGunadarma.png
+	lyxscale 50
+	width 50mm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+JudulCover
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Written By :
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Name
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Student ID Number
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NPM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Department
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Department
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Advisor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Supervisor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+vspace*{6mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Submitted in Partial Fulfillment of Requirements
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+vspace*{-1mm}
+\end_layout
+
+\end_inset
+
+
+\size large
+for Bachelor’s Degree 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+vspace*{3mm}
+\end_layout
+
+\end_inset
+
+
+\size large
+JAKARTA
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1mm}
+\end_layout
+
+\begin_layout Plain Layout
+
+2016
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Statement of Originality and Publications
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Here by :
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{0.5cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top" width="35mm">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Name
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Student ID Number
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NPM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Title of Undergraduate Thesis
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+MakeUppercase{
+\backslash
+JudulInggris}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Session Date
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalSidang
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Passing Date
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalLulus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{0.5cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+States that the writings are the result of my own work and may be published
+ entirely by Gunadarma University.
+ All quotations in any form have been following the rules and ethics that
+ applicable.
+ All copyrights of logos and products mentioned in this book are the property
+ of their respective rights holders, unless otherwise noted.
+ Regarding the content and writing is the responsibility of authors, not
+ Gunadarma University.
+ Hence this statement is made actually with full awareness.
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{6mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Kota, 
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Tanggal
+\backslash
+ 
+\backslash
+Bulan
+\backslash
+ 
+\backslash
+Tahun
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{15mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Name
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Chapter*
+Validation Page
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Advisory Comitee
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table}[h]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|p{1cm}|p{8cm}|p{4cm}|}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline No.
+ & Name & Position 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 1.
+  & 
+\backslash
+Supervisors & Chairman 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 2.
+  & 
+\backslash
+AnggotaPembimbingA & Member 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 3.
+  & 
+\backslash
+AnggotaPembimbingB & Member 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 4.
+  & 
+\backslash
+AnggotaPembimbingC & Member 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align right
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1.5cm}
+\end_layout
+
+\end_inset
+
+Session Date : 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalSidang
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Board of Examiners
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table}[h]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{|p{1cm}|p{8cm}|p{4cm}|}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline No.
+ & Name & Position 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 1.
+  & 
+\backslash
+KetuaUjian & Chairman 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 2.
+  & 
+\backslash
+SekUjian & Secretary 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 3.
+  & 
+\backslash
+AnggotaUjianA & Member 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 4.
+  & 
+\backslash
+AnggotaUjianB & Member 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 5.
+  & 
+\backslash
+AnggotaUjianC & Member 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 6.
+  & 
+\backslash
+AnggotaUjianD & Member 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+Passing Date: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalLulus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none" width="135mm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Acknowledged by ,
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Supervisor 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Head of Bachelor’s Defense
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+ Examination Departement 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Supervisor
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+PejabatBagianSidang
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Abstract
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Abstract}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Name
+\end_layout
+
+\end_inset
+
+.
+ 
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NPM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+MakeUppercase{
+\backslash
+JudulInggris}
+\end_layout
+
+\end_inset
+
+.
+
+\series default
+ Undergraduate thesis, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fakultas
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Department
+\end_layout
+
+\end_inset
+
+ Department, Gunadarma University, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Tahun
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Keyword : 
+\emph on
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+KeyWords
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+JumlahHalamanDepan
+\end_layout
+
+\end_inset
+
+ + 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+JumlahHalaman
+\end_layout
+
+\end_inset
+
+ + appendix)
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fashion axe hella woke, farm-to-table echo park single-origin coffee sustainable
+ typewriter.
+ Schlitz fashion axe freegan, scenester butcher chambray woke four loko
+ PBR&B.
+ Craft beer keffiyeh messenger bag pork belly, intelligentsia master cleanse
+ quinoa skateboard.
+ Chicharrones air plant squid artisan kinfolk distillery.
+ Austin banh mi church-key swag pour-over locavore bicycle rights, small
+ batch live-edge 90's four dollar toast.
+ Umami letterpress mumblecore lo-fi messenger bag, vexillologist jean shorts
+ vape XOXO cornhole.
+ Chillwave woke aesthetic health goth roof party, art party forage man braid.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ References (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TahunPustaka
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Chapter*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Acknowledgements}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+First of all I would like to thank to Jesus Christ for His mercy and blessings
+ that always accompany me, so I be able to finish my undergraduate thesis
+ which entitled 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+JudulInggris
+\end_layout
+
+\end_inset
+
+.
+ This undergraduate thesis is intended to complete the requirement to finish
+ my study in the Informatics Engineering Department, Gunadarma University.
+ The completion of this thesis would not have been possible without the
+ support and encouragement from many people.
+ Therefore, I would like to say thank to:
+\end_layout
+
+\begin_layout Enumerate
+Prof.
+ Dr.
+ E.
+ S.
+ Margianti, SE., MM.
+ Rector of Gunadarma University.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Prof.
+ Dr.
+ Ir.
+ Bambang Suryawan, MT., Dean of Faculty of Industrial Technology.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Dr.-Ing.
+ Adang Suhendra, SSi, SKom, MSc, head of Informatics Engineering Program
+ 
+\end_layout
+
+\begin_layout Enumerate
+Drs.
+ Haryanto, MMSI.
+ director of SarMag program who gave author a chance to join SarMag program.
+\end_layout
+
+\begin_layout Enumerate
+Dr.
+ Edi Sukirman, SSi, MM as Department Head of Bachelors Defense Examination.
+\end_layout
+
+\begin_layout Enumerate
+Dr.
+ Lintang Yuniar Banowosari, SKom, MSc, as author’s supervisor.
+ For her patience, guidance, support and encouragements during the research.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Mr.
+ Remi Senjaya, ST, MMSI, as SarMag coordinator for support and help author
+ during SarMag period
+\end_layout
+
+\begin_layout Enumerate
+All SarMag lecturers, for their knowledges and experiences given to the
+ author.
+\end_layout
+
+\begin_layout Standard
+This thesis is still need some improvements.
+ Therefore, author is looking forward for constructive criticism or suggestions.
+ Hopefully, this thesis can bring advantages for another authors and the
+ readers.
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Kota, 
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Tanggal
+\backslash
+ 
+\backslash
+Bulan
+\backslash
+ 
+\backslash
+Tahun
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{15mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Name
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Standard
+
+\lang bahasa
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Background"
+
+\end_inset
+
+Background
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Objectives"
+
+\end_inset
+
+Objectives
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Scope-of-the-Work"
+
+\end_inset
+
+Scope of the Work
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Research-Method"
+
+\end_inset
+
+Research Method
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Thesis-Structure"
+
+\end_inset
+
+Thesis Structure
+\end_layout
+
+\begin_layout Chapter
+\paragraph_spacing onehalf
+Theoretical Background
+\end_layout
+
+\begin_layout Chapter
+\paragraph_spacing onehalf
+Analysis and Design
+\end_layout
+
+\begin_layout Chapter
+Testing and Implementation
+\end_layout
+
+\begin_layout Chapter
+Conclusion
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Conclusion"
+
+\end_inset
+
+Conclusion
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "Ika Pretty S"
+options "apalike"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+thechapter}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+chapter{Dj Class Implementation}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

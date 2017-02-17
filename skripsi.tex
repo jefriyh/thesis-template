@@ -1,0 +1,3638 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,oneside,bahasa,american]{book}
+\usepackage{charter}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=4cm,rmargin=3cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{color}
+\usepackage{babel}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[authoryear]{natbib}
+\onehalfspacing
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\DeclareRobustCommand{\cyrtext}{%
+  \fontencoding{T2A}\selectfont\def\encodingdefault{T2A}}
+\DeclareRobustCommand{\textcyr}[1]{\leavevmode{\cyrtext #1}}
+\AtBeginDocument{\DeclareFontEncoding{T2A}{}{}}
+
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newenvironment{lyxcode}
+{\par\begin{list}{}{
+\setlength{\rightmargin}{\leftmargin}
+\setlength{\listparindent}{0pt}% needed for AMS classes
+\raggedright
+\setlength{\itemsep}{0pt}
+\setlength{\parsep}{0pt}
+\normalfont\ttfamily}%
+ \item[]}
+{\end{list}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%% \renewcommand{\chapter}[1]{\chapter[#1]{\centering #1}}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{tocbibind}
+\usepackage{url}
+\usepackage[titletoc]{appendix}
+
+\definecolor{lineno}{rgb}{0.5,0.5,0.5}
+\definecolor{bcolor}{rgb}{0.98,0.98,0.98}
+\definecolor{code}{rgb}{0,0.1,0.6}
+
+\definecolor{codesty}{rgb}{0.7,0.1,0.1}
+\definecolor{commandsty}{rgb}{0.1,0.5,0.0}
+\definecolor{keywordsty}{rgb}{0.4,0.0,0.4}
+\definecolor{stringsty}{rgb}{1.0,0.5,0.0}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+
+\renewcommand{\contentsname}{Table of Contents}
+
+\newcommand{\Judul}{}
+\newcommand{\JudulInggris}{Plagiarism Detection of Java Source Code}
+\newcommand{\Name}{Ika Pretty Siregar}
+\newcommand{\NPM}{53411487}
+\newcommand{\NIRM}{}
+\newcommand{\JenisTulisan}{Undergraduate Thesis}
+%\newcommand{\Gelar}{Jenjang DIII / Setara Sarjana Muda}
+\newcommand{\Fakultas}{Faculty of Industrial Technology}
+\newcommand{\Department}{Informatics Engineering}
+%\newcommand{\Prodi}{Direktorat Program Diploma Tiga Teknologi Informasi}
+\newcommand{\Tahun}{2015}
+\newcommand{\Bulan}{February}
+\newcommand{\Tanggal}{24}
+\newcommand{\Kota}{Jakarta}
+\newcommand{\KataKunci}{Java, Plagiat Kode Sumber,  Levenshtein Distance, Deteksi Java }
+\newcommand{\KeyWords}{Java, Source Code Plagiarism, Levenshtein Distance, Detection Java}
+\newcommand{\KoordinatorPI}{}
+\newcommand{\KetuaJurusan}{Haryanto, SSi, MM}
+\newcommand{\Supervisor}{Dr. Lintang Yuniar Banowosari, S.Kom., M.Sc.}
+\newcommand{\AnggotaPembimbingA}{Dr. rer. nat. I Made Wiryana, SSi., SKom., MAppSc}
+\newcommand{\Supervisors}{Dr. Tubagus Maulana Kusuma, SKom., MEngSc.}
+\newcommand{\AnggotaPembimbingB}{Dr. Lintang Yuniar Bonowosari, S.Kom., MSc.}
+\newcommand{\KetuaUjian}{Dr. Ravi Ahmad Salim}
+\newcommand{\SekUjian}{Prof. Dr. Wahyudi Priyono }
+\newcommand{\AnggotaUjianA}{Dr. Tubagus Maulana Kusuma, SKom., MEngSc.}
+\newcommand{\AnggotaUjianB}{Dr. rer. nat. I Made Wiryana, SSi., SKom.,MAppSc}
+\newcommand{\AnggotaUjianC}{Dr. Lintang Yuniar Bonowosari, S.Kom., MSc.}
+\newcommand{\Ringkasan}{Tulis ringkasan skripsi, pi, atau apa dengan bahasa yang jelas, lugas dan menggambarkan secara singkat tulisan ini.  Sebaiknya tidak lebih dari 150 kata dan sudah menjelaskan dari permasalahan, pembahasan dan penutup.}
+\newcommand{\JumlahPustaka}{- -}
+\newcommand{\JumlahHalaman}{125}
+\newcommand{\JumlahHalamanDepan}{xiv}
+\newcommand{\TahunPustaka}{1972-2013}
+%%
+%% Keterangan administratif sidang sarjana
+%%
+\newcommand{\TanggalSidang}{24 February 2015}
+\newcommand{\TanggalLulus}{24 February 2015}
+\newcommand{\TanggalSah}{}
+\newcommand{\PejabatBagianSidang}{Dr. Edi Sukirman, S.Si, MM}
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{Chapter  \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}{}}
+
+
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
+\fancyhead[LO]{\textit{\nouppercase{\rightmark}}}
+
+\fancypagestyle{plain}{ %
+\fancyhf{} % remove everything
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt} % remove lines as well
+\renewcommand{\footrulewidth}{0pt}}
+\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
+
+\makeatother
+
+\usepackage{listings}
+\lstset{backgroundcolor={\color{bcolor}},
+basicstyle={\ttfamily\small\color{codesty}},
+breaklines=true,
+commentstyle={\color{commandsty}},
+deletekeywords={alter},
+firstnumber=1,
+frame=tb,
+identifierstyle={\color{black}},
+keywordstyle={\color{blue}\bfseries},
+language=C,
+morekeywords={dosync,if},
+numberfirstline=true,
+numbers=left,
+numberstyle={\color{lineno}\sffamily\scriptsize},
+showspaces=false,
+showstringspaces=false,
+stringstyle={\itshape\color{stringsty}}}
+\addto\captionsamerican{\renewcommand{\lstlistingname}{Listing}}
+\addto\captionsbahasa{\renewcommand{\lstlistingname}{Listing}}
+\renewcommand{\lstlistingname}{Listing}
+
+\begin{document}
+\begin{onehalfspace}
+\thispagestyle{empty}
+\sloppy
+\end{onehalfspace}
+
+\pagenumbering{roman}
+
+\vspace*{10mm}
+
+\begin{center}
+\textbf{\huge{}GUNADARMA UNIVERSITY}
+\par\end{center}{\huge \par}
+
+\begin{center}
+\textbf{\MakeUppercase{\Fakultas}}
+\par\end{center}
+
+\vspace*{12mm}
+
+\begin{center}
+\includegraphics[width=35mm]{\string"gambar ika/univgundar2\string".jpg}
+\par\end{center}
+
+\vspace*{6mm}
+
+\begin{center}
+\textbf{\Large{}\JudulInggris }
+\par\end{center}{\Large \par}
+
+\vspace*{1cm}
+
+\noindent \begin{center}
+\begin{tabular}{lcl}
+Name & : & \Name\tabularnewline
+Student ID Number & : & \NPM\tabularnewline
+Department & : & \Department\tabularnewline
+Supervisor & : & \Supervisor\tabularnewline
+\end{tabular}
+\par\end{center}
+
+ \vspace*{10mm}
+
+\begin{center}
+{\large{}Thesis Submitted to The Faculty of Industrial Technology}
+\par\end{center}{\large \par}
+
+\begin{center}
+{\large{}Gunadarma University}
+\par\end{center}{\large \par}
+
+\begin{center}
+{\large{}In Partial Fulfillment of The Requirements}
+\par\end{center}{\large \par}
+
+\begin{center}
+{\large{}For Undergraduate Degree}
+\par\end{center}{\large \par}
+
+\begin{center}
+{\large{}Jakarta}
+\par\end{center}{\large \par}
+
+\begin{center}
+{\large{}\vspace*{3mm}
+2015}
+\par\end{center}{\large \par}
+
+
+\chapter*{Statement of Originality and Publications}
+
+\begin{singlespace}
+\thispagestyle{empty}
+
+Here by :
+\end{singlespace}
+
+\vspace*{0.5cm}
+
+\begin{singlespace}
+\begin{tabular}{>{\raggedright}p{35mm}c>{\raggedright}p{0.6\textwidth}}
+Name & : & \textbf{\Name}\tabularnewline
+Student ID Number & : & \textbf{\NPM}\tabularnewline
+Title of Undergraduate Thesis & : & \textbf{\MakeUppercase{\JudulInggris}}\tabularnewline
+Session Date & : & \textbf{\TanggalSidang}\tabularnewline
+Passing Date & : & \textbf{\TanggalLulus}\tabularnewline
+\end{tabular}
+\end{singlespace}
+
+\vspace*{0.5cm}
+
+States that the writings are the result of my own work and may be
+published entirely by Gunadarma University. All quotations in any
+form have been following the rules and ethics that applicable. All
+copyrights of logos and products mentioned in this book are the property
+of their respective rights holders, unless otherwise noted. Regarding
+the content and writing is the responsibility of authors, not Gunadarma
+University. Hence this statement is made actually with full awareness.
+
+\begin{flushright}
+\vspace*{15mm}
+\par\end{flushright}
+
+\begin{flushright}
+\Kota, \  \Tanggal\ \Bulan\ \Tahun
+\par\end{flushright}
+
+\begin{flushright}
+\vspace*{15mm}
+\par\end{flushright}
+
+\begin{flushright}
+(\Name)
+\par\end{flushright}
+
+
+\chapter*{Validation Page}
+
+\thispagestyle{empty}
+
+\begin{center}
+Advisory Comitee\\
+Session Date : \TanggalSidang
+\par\end{center}
+
+\begin{table}[h]
+\begin{tabular}{|p{1cm}|p{8cm}|p{4cm}|}
+\hline No. & Name & Position \\
+\hline 1.  & \Supervisors & Supervisor \\
+\hline 2.  & \AnggotaPembimbingA & Member \\
+\hline 3.  & \AnggotaPembimbingB & Member \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{center}
+Board of Examiners\\
+Passing Date: \TanggalLulus
+\par\end{center}
+
+\begin{table}[h]
+\begin{tabular}{|p{1cm}|p{8cm}|p{4cm}|}
+\hline No. & Name & Position \\
+\hline 1.  & \KetuaUjian & Chairman \\
+\hline 2.  & \SekUjian & Secretary \\
+\hline 3.  & \AnggotaUjianA & Member \\
+\hline 4.  & \AnggotaUjianB & Member \\
+\hline 5.  & \AnggotaUjianC & Member \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{center}
+\begin{tabular}{c>{\centering}p{2cm}c}
+\multicolumn{3}{>{\centering}p{135mm}}{\textbf{Acknowledged by ,}}\tabularnewline
+\textbf{\footnotesize{}Supervisor } &  & \textbf{\footnotesize{}Department Head of Bachelor's }\tabularnewline
+{\footnotesize{}~} &  & \textbf{\footnotesize{}Defense Examination}\tabularnewline
+~ &  & ~\tabularnewline
+~ &  & ~\tabularnewline
+~ &  & ~\tabularnewline
+~ &  & ~\tabularnewline
+{\footnotesize{}(\Supervisor)} &  & {\footnotesize{}(\PejabatBagianSidang)}\tabularnewline
+\end{tabular}
+\par\end{center}
+
+
+\chapter*{Abstract}
+
+\begin{singlespace}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\noindent\textbf{\Name. }\NPM
+
+\noindent\textbf{\MakeUppercase{\JudulInggris}.} Undergraduate thesis,
+\Fakultas, \Department Department, Gunadarma University, \Tahun.
+
+\medskip{}
+
+\end{singlespace}
+
+\noindent Keyword : \emph{\KeyWords}
+
+\begin{singlespace}
+\medskip{}
+
+
+\noindent (\JumlahHalamanDepan + \JumlahHalaman + appendix)
+
+\bigskip{}
+
+\end{singlespace}
+
+The Java developer population are 9,007,346 making Java the top used
+programming language in the world. With so many users of Java, computer
+and internet allow the act of plagiarism against the Java. Since Internet
+is accessible to everyone, it is easy to use Internet as a source
+of information. However, copying document from Internet can be considered
+as plagiarism. One of an algorithm to detect plagiarism is Levenshtein
+Distance algorithm. Levenshtein Distance algorithm can calculate two
+strings of arbitrary length and allow insertion, deletion also substitution.
+This thesis is about how the implementation of the Levenshtein Distance
+algorithm to determine the degree of similarity of two java source
+codes and detect the presence of a source code plagiarism (as target
+document) to another source code (as source document) in an application
+called Detector of Java or Dj. This application can perform check
+java source code in the local disk of user pc that will automatically
+store into database. Besides, this application can also perform check
+java source code stored in the database. To facilitate the use of
+this application, there is short video tutorial that show step-by-step
+usage and also tooltip that provide information about the use of the
+features. In this application development process, first is a requirements
+analysis of the functional and non-functional requirements. Second
+is design with the help of UML and last is programming with the help
+of NetBeans, MySQL and XAMPP. In testing process is conducted black-box
+testing method of existing features.
+
+\begin{singlespace}
+\bigskip{}
+
+
+\noindent References (\TahunPustaka)
+\end{singlespace}
+
+
+\chapter*{Acknowledgements}
+
+\addcontentsline{toc}{chapter}{Acknowledgements}
+
+First of all I would like to thank to Jesus Christ for His mercy and
+blessings that always accompany me, so I be able to finish my undergraduate
+thesis which entitled\JudulInggris. This undergraduate thesis is
+intended to complete the requirement to finish my study in the Informatics
+Engineering Department, Gunadarma University. The completion of this
+thesis would not have been possible without the support and encouragement
+from many people. Therefore, I would like to say thank to:
+\begin{enumerate}
+\item Prof. Dr. E. S. Margianti, SE., MM. Rector of Gunadarma University. 
+\item Prof. Suryadi Harmanto, SSi, MMSI, 2nd Rector Assistant of Gunadarma
+University who gave author the opportunity to join SARMAG Program. 
+\item Prof. Dr. Ir. Bambang Suryawan, MT., Dean of Faculty of Industrial
+Technology. 
+\item Dr.-Ing. Adang Suhendra, SSi, SKom, MSc, head of Informatics Engineering
+Program 
+\item Drs. Haryanto, MMSI. director of SARMAG program who gave author a
+chance to join SARMAG program.
+\item Dr. Edi Sukirman, S.Si, MM as Department Head of Bachelors Defense
+Examination.
+\item 7. Dr. Lintang Yuniar Banowosari, SKom, MSc, as author\textquoteright s
+supervisor. For her patience, guidance, support and encouragements
+during the research. 
+\item Remi Senjaya, ST, MMSI, as SarMag coordinator for support and help
+author during SarMag period
+\item All SarMag lecturers, for their knowledges and experiences given to
+the author.
+\item Author\textquoteright s beloved Father, Hilman Dollar Siregar, Author\textquoteright s
+Mother, Corry Das Parlajoan Siregar, Author\textquoteright s Brother,
+Deboner Hillery Hasiholan Siregar, and Author\textquoteright s Sister,
+Icha Tifany Siregar, who always provide prayers, advices, support
+and encourage the author to complete this thesis.
+\item Author\textquoteright s friends in SMTI06 who always comfort, support,
+and sharing their knowledge in this period. 
+\item Author\textquoteright s friends in SarMag and Gunadarma University
+who support the author and willing to answer questionnaire. 
+\item Author\textquoteright s friends for support the author in completing
+this thesis.
+\end{enumerate}
+This thesis is still need some improvement. Therefore, author is looking
+forward for constructive criticism or suggestions. Hopefully, this
+thesis can bring advantages for another authors and the readers.
+
+\begin{flushright}
+\Kota, \  \Tanggal\ \Bulan\ \Tahun
+\par\end{flushright}
+
+\begin{flushright}
+\vspace*{15mm}
+\par\end{flushright}
+
+\begin{flushright}
+(\Name)
+\par\end{flushright}
+
+\tableofcontents{}\listoffigures
+
+
+\listoftables
+
+
+
+\chapter{Introduction}
+
+\selectlanguage{bahasa}%
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\selectlanguage{american}%
+
+\section{\label{sec:Background}Background}
+
+A computer is a partner of human life. It brings changes in every
+sphere of human activity. Computer can process millions of instructions
+in a few seconds, hence a computer can be defined as an automatic
+electronic machine for performing calculations or controlling operations
+that are expressible in numerical or logical terms. \citep{Elango}. 
+
+In order to comprehend human aims, the programming language is created.
+Programming Language is a language used to write instructions that
+can be translated into machine language. One of the levels of computer
+programming language is high-level languages. The advantages of using
+a high-level language instead of others are simpler, more understandable,
+consist of English language and does not depend upon machine. According
+to IEEE Spectrum Java as one of high-level language is the most popular
+programming languages followed by C, C++,C\# and Python. \citep{StephenCass}
+The Java developer population are 9,007,346 making Java the top used
+programming language in the world as reported by The 2009 Global Developer
+Population and Demographics Survey, conducted by Evans Data Corporation.
+\citep{Numjava}. 
+
+Java is a high-level programming language originally developed by
+Sun Microsystems and released in 1995. Java runs on a variety of platforms,
+such as Windows, Mac OS, and the various version of UNIX. Java provides
+advantages over other languages like object oriented, platform independent,
+simple, secure, architectural-neutral, portable, robust, multithreaded,
+interpreted, high performance, distributed and dynamic.\citep{TutorialJava}. 
+
+With so many users of Java, computer and internet allows the act of
+plagiarism against the Java source code. Since Internet is accessible
+to everyone, it is easy to use Internet as a source of information.
+However, copying documents from Internet can be considered as plagiarism.
+It can even result to some legal problems, such as copyright infringement.\citep{Meichelbecks}
+A new study of Pew Research Center shows that American college students
+are increasingly plagiarizing others work and the Internet has played
+a significant role in this trend.\citep{Anugrah}Plagiarism is an
+academic crime and violation of ethics. Thus, plagiarism is essentially
+a corruption of ethics. In education, plagiarism is a disgrace which
+is not easily forgotten.\citep{Sugiyanto}. 
+
+According to the data on the site Plagiarism.org, there is a study
+that conducted by The Center for Academic Integrity with the result
+that almost 80\% of students admitted to plagiarism at least one time.
+Likewise, the results of a survey conducted by the Psychological Record,
+36\% of students admitted to plagiarism against written documents.
+\citealt{Regina}. In 1977 the people start show concerns about plagiarism
+in source code. A survey in 2002 shows that 85.4\% in a class of 137
+students at Monash University and 69.3\% in a class of 150 students
+at Swinburne University are involved in source code plagiarism and
+they admit this dishonesty. \citep{Ameera}. 
+
+An easy way for plagiarism a source code is using Naked Plagiarism
+or Semi Naked. Naked Plagiarism is a copy-paste techniques whereas
+Semi Naked is add a few changes after doing a copy-paste . \citep{Michaelsen}.
+Generally, plagiarism in coding is hard to be detected because of
+the similar coding used for the same application. Plagiarism in coding
+is easy to do, but difficult to detect (as cited in N. Wagner, 2000).
+Students copy all or part of a program from some source or from different
+sources and submit the copy as their own work. This includes students
+who collaborate and submit similar work. Such plagiarism is felt to
+be common, though the true extent is hard to assess. When a teacher
+in a programming course gives same assignment problems to all students
+then all students have to work on same problems. So it is the possibility
+that some students write source code of problems by their own and
+remaining students just take the code from them and amend it like
+changing of variable names, changing the order of statements, functions
+and variables of class and submit it. These types of modifications
+in source code are very difficult to catch. \citep{Ahmad}
+
+Some algorithms commonly used to detect plagiarism are Hamming Distance,
+Longest Common Subsequence, Smith-Waterman, Needleman-Wunsch Algorithm
+and Levenshtein Distance Algorithm. Hamming Distance allows only substitution,
+hence, it only applies to strings of the same length. The Longest
+Common Subsequence metric allows only insertion and deletion. Unlike
+Hamming Distance and Longest Common Subsequence, Levenshtein Distance
+can calculate two strings of arbitrary length and allow insertion,
+deletion also substitution.
+
+The levenshtein algorithm is used in some Translation Environment
+Tools, such as translation memory leveraging applications to measure
+the edit distance between two fuzzy matching content segments. The
+Levenshtein distance is a metric for measuring the amount of difference
+between two sequences. The Levenshtein distance between two strings
+is given by the minimum number of operations needed to transform one
+string into the other, where an operation is an insertion, deletion,
+or substitution of a single character.\citep{Frederic} In this study
+the author using Levenshtein Distance as algorithm that implemented
+in application built using Java, to detect an act of plagiarism in
+Java source program.
+
+
+\section{\label{sec:Objectives}Objectives}
+
+The aims of this study are:
+\begin{enumerate}
+\item Develop an application by implement the Levenshtein Distance algorithm
+for detecting the similarity of the source code.
+\item Knowing the process of detecting the similarity of the source code. 
+\item Designing plagiarism detection application by using the Java Programming
+Language in NetBeans. 
+\item Checking a very large source code quickly and effectively. 
+\end{enumerate}
+
+\section{\label{sec:Scope-of-the-Work}Scope of the Work}
+
+This thesis has limitation problem, that are : 
+\begin{enumerate}
+\item Extension of source code used in this study is java. 
+\item Application considers all the code that is tested already free from
+error.
+\item The result is a percentage of how much similarity the target code
+with source code 
+\item The application works offline.
+\end{enumerate}
+
+\section{\label{sec:Research-Method}Research Method}
+
+In this study required hardware and software. Minimum requirements
+of hardware is a personal computer unit complete with specifications
+are an Intel Pentium 4 (2 GHz), 512 MB RAM while requirement of software
+are Lyx and Netbeans IDE 7.3. This study requires several steps: 
+\begin{enumerate}
+\item Theoretical Study. It is conducted by author by collecting knowledge
+about plagiarism detection and Levenshtein Distance algorithm. 
+\item Literature Study. It is conducted by author by collecting knowledge
+about previous works by other researchers. 
+\item Interview. It is conducted by author by collecting the results of
+the interview several candidate of users.
+\item System Design. It is conducted by author by implementing the theories,
+some literatures and the results of the interview to design the application. 
+\item Implementation. It is conducted by author by implementing the design
+into code and constructing the application. 
+\item Testing and Evaluation. It is conducted by author by test an application
+that has been made to find errors then evaluated. 
+\end{enumerate}
+
+\section{\label{sec:Thesis-Structure}Thesis Structure}
+
+Systematic of writing in this study is divided into five chapters,
+namely Introduction, Theoretical Background, Analysis and Design,
+Testing and Implementation, and Conclusion.
+\begin{enumerate}
+\item Introduction contains Background Issue, Objective of the Thesis, Scope
+of the Work, Research Method, and Structure of the Thesis. 
+\item Theoretical Background contains the relevant theories used in this
+thesis. This theory involves understanding the application, the Java
+language, Levenshtein algorithms and supporting software. 
+\item Analysis and Design explain analysis requirements and design application
+that have been performed. 
+\item Testing and Implementation describes the implementation of the application
+and application testing that has been completed. 
+\item Conclusion describes conclusion of algorithms implementation that
+has been done and add some suggestions regarding development for the
+future. 
+\end{enumerate}
+\begin{onehalfspace}
+
+\chapter{Theoretical Background}
+\end{onehalfspace}
+
+
+\section{\label{sec:Plagiarism}Plagiarism }
+
+Plagiarism is derived from the Latin word 'plagiarius', which means
+'kidnapper' from The Concise Oxford Dictionary. Plagiarism is defined
+by S. Hannabuss as \textquotedblleft is the act of imitating or copying
+or using somebody else\textquoteright s creation or idea without permission
+and presenting it as one\textquoteright s own.\textquotedblright{}
+\citep{Ahmad}. Hawley wrote that plagiarism is \char`\"{}perhaps
+best conceptualised as existing along a continuum of behaviours ranging
+from sloppy paraphrasing to the intentional copying of someone else's
+work verbatim without credit to the source\char`\"{}. \citep{Christopher}.
+
+
+\subsection{\label{sub:Type-of-Plagiarism}Type of Plagiarism}
+
+There are five types of Plagiarism among student \citep{Barnbaum}
+: 
+\begin{enumerate}
+\item Type I: Copy \& Paste Plagiarism Any time you lift a sentence or significant
+phrase intact from a source, you must use quotations marks and reference
+the source. 
+\item Type II: Word Switch Plagiarism If you take a sentence from a source
+and change around a few words, it is still plagiarism. If you want
+to quote a sentence, then you need to put it in quotation marks and
+cite the author and article. But quoting source articles should only
+be done if what the quote says is particularly useful in the point
+you are trying to make in what you are writing. In the case below,
+a quotation would not be useful. The person who plagiarized in this
+example has just been too lazy to synthesize the ideas expressed in
+the source article. 
+\item Type III: Style Plagiarism (This is trap that most students fall into.)
+When you follow a source article sentence-by-sentence or paragraph-by-paragraph,
+it is plagiarism, even though none of your sentences is exactly like
+those in the source article or even in the same order. What you are
+copying in this case, is the author's reasoning style. 
+\item Type IV: Metaphor Plagiarism Metaphors are used either to make an
+idea clearer or give the reader an analogy that touches the senses
+or emotions better than a plain description of the object or process.
+Metaphors, then, are an important part of an author's creative style.
+If you cannot come up with your own metaphor to illustrate an important
+idea, then use the metaphor in the source article, but give the author
+credit for it.
+\item Type V: Idea Plagiarism If the author of the source article expresses
+a creative idea or suggests a solution to a problem, the idea or solution
+must be clearly attributed to the author. Many students have difficulty
+distinguishing an author's ideas and/or solutions from public domain
+information. Public domain information is any idea or solution about
+which people in the field accept as general knowledge. 
+\end{enumerate}
+According to Lars R. Jones, Phd. from Florida Institute of Technology,
+Plagiarism among student is divided into four categories \citep{Lars}:
+\begin{enumerate}
+\item Category 1 - Unauthorized and/or unacknowledged collaborative work:
+While students are expected to do their own research and writing,
+instructors also understand that students may discuss their own research
+projects with other students in the same course. Instructors strongly
+suspect collaborative plagiarism when the same or similar phrases,
+quotations, sentences, and/or parallel constructions appear in two
+or more papers on the same topic. To protect yourself, you should
+acknowledge\textemdash in a footnote or endnote\textemdash any significant
+discussions you have had with others, as well as any advice, comments,
+or suggestions that you have received from others, including your
+instructor or other instructors if appropriate. 
+\item Category 2 - Attempting to pass off, as your own work, a whole work
+or any part of a work belonging to another person, group or institution:
+This includes borrowing, buying, commissioning, copying, receiving,
+downloading, taking, using, and/or stealing a paper that is not your
+own. Submitting an entire work which is not your own also constitutes
+research or academic fraud. A good rule of thumb is that original
+student work should comprise at least 80 percent of any written assignment.
+Assignments should not be padded out with Internet-harvested, borrowed,
+paraphrased, quoted, or plagiarized material. Within this category,
+four specific types of plagiarism can be identified : 
+
+\begin{itemize}
+\item Using such material without any attribution, citation, acknowledgment
+and/or without quotation marks is plagiarism: You must use quotation
+marks on any amount of text taken directly from another source, even
+from the course textbook; moreover, such material must be cited correctly.
+\item The use of such material with false attributions/citations and/or
+the use of deceptive or fabricated citations to disguise direct plagiarism
+is still plagiarism. Students who intentionally plagiarize often attempt
+to disguise the plagiarized material in their papers with fake or
+inadequate citations. This is especially true of Internet URLs which
+can prove time-consuming to verify. Links to password-protected, private,
+and fee-for-service (non-academic) domains\textemdash and even apparent
+misspellings\textemdash should be considered suspect. Numerous false
+and misleading citations within a paper may also constitute research
+or academic fraud. Any citation must point the reader to the exact
+location of the cited material, whether in print, in an on-line source,
+or in another medium. 
+\item The use of such material with quotation marks but without any attribution,
+citation, or with inadequate/improper attribution/citation is considered
+plagiarism. You must use proper citations for all quoted and paraphrased
+material taken from another source. For example, the student used
+quotation marks and seems to cite the quoted text but, by neglecting
+to refer to the page from which this quotation was taken, has failed
+to cite properly. 
+\item The use of such material\textemdash correctly attributed and properly
+cited\textemdash but without quotation marks is plagiarism. You must
+use quotation marks on any amount of text taken from another source.
+For example, the student cited material that was copied, in large
+part, directly from the source text but the student failed to indicate
+the quoted material by using quotation marks. The student pretended
+to be paraphrasing but was really plagiarizing. 
+\end{itemize}
+\item Category 3 - The use of any amount of text that has been improperly
+paraphrased constitutes plagiarism. Suggesting an improper reliance
+on a single source, this includes \textquotedblleft mosaic plagiarism\textquotedblright{}
+or \textquotedblleft cut-and-paste plagiarism.\textquotedblright{}
+To paraphrase improperly is simply to put the words of a source text
+in a different order or form while retaining the main idea that is
+the intellectual property of the original author/translator. When
+you simply alter the text itself (but not the author\textquoteright s
+idea), all that you have done is to eliminate the obvious need for
+quotation marks; you have not eliminated the need for an explanatory
+citation/attribution. The idea itself remains the intellectual property
+of the original author/translator and, therefore, must be cited as
+such. 
+\item Category 4 - The use of any amount of text, that is properly paraphrased\textemdash but
+which is either not cited or which is improperly cited\textemdash constitutes
+plagiarism. This includes papers in which a general failure to cite
+sources or a gross negligence in citing sources is apparent. Moreover,
+attaching false, misleading, or improper attributions/citations to
+properly paraphrased texts still constitutes plagiarism. 
+\end{enumerate}
+
+\subsection{\label{sub:Plagiarisme-Cases}Plagiarisme Cases}
+
+Plagiarism of written text and software code can occur in many areas
+and is not simply limited to academic institutions. For example, in
+1988 Barbara Chase-Riboud brought a plagiarism lawsuit against the
+film director Steven Spielberg and Dreamworks SKG over their latest
+film called Amistad. Chase-Riboud argued that the characters, scenes
+and other aspects of her book entitled Echo of Lions had been illegally
+copied without her permission. However, on February 9th 1988 Chase-Riboud
+dropped the charges and the film was released in December. \citep{Doug}.
+Another examples of famous plagiarism cases are \citep{Joe} :
+\begin{enumerate}
+\item 1. Harry Potter and Willy the Wizard In June 2009, the estate of deceased
+author Adrian Jacobs sued the publishers of Harry Potter. They alleged
+that JK Rowling\textquoteright s fourth book in the Potter series,
+The Goblet of Fire, lifted heavily from Jacobs\textquoteright{} previously
+published novel The Adventures of Willy the Wizard: Livid Land. Both
+main characters go through a series of challenges in order to save
+friends. The estate first sued Bloomsbury, the UK publisher, and when
+after the American publisher, Scholastic, in 2011. Judges in both
+cases dismissed the claims for lack of evidence, but Jacob\textquoteright s
+son and grandson who run the estate may try to take the case to Australia. 
+\item The Wild Blue and Wings of Morning Historian and writer Stephen Ambrose
+came under plagiarism fire in 2002 when his latest work, The Wild
+Blue: The Men and Boys Who Flew the B-234s Over Germany was compared
+to a 1995 book Wings of Morning: The Story of the Last American Bomber
+Shot Down Over Germany in World War II. Although there was likely
+to be some cross over because of the similar subject matter, exact
+phrases seem to be copied from the older version of the book. The
+case was never taken to trial, but journalists found additional cases
+of possible plagiarism in other books by Ambrose. 
+\item Jayson Blair and the New York Times As a staff reporter for the New
+York Times, Jayson Blair committed journalistic fraud on numerous
+occasions. The NYT broke their own story in 2003 after investigation
+into Blair\textquoteright s 600 articles showed plagiarism from other
+newspaper stories or downright lies. Blair reported on news without
+actually being there, invented quotes from sources and created events
+out of thin air. After the investigation, Blair resigned and the New
+York Times published an apology for their oversight and asked readers
+to help continue the investigation. 
+\item Joe Biden and Neal Kinnock Before Joe Biden became Vice President,
+he was a senator from Delaware who wanted to be president. During
+the 1987 presidential race, Biden\textquoteright s stump speech in
+Iowa concluded with several phrases lifted from a speech delivered
+by Neal Kinnock, a politician from the UK. Challenger Michael Dukakis
+picked up on the incident and created an attack video that showed
+the similarities between the speeches. Although Biden later admitted
+that he had been inspired by the speech and had given it reference
+in previous uses of it, this time was different. New York Times reporter
+Maureen Dowd broke the story and brought it national attention in
+the pre-YouTube world. Biden ended up pulling out the 1988 race entirely. 
+\item Maureen Dowd and Talking Points Speaking of Maureen Dowd, Dowd herself
+was accused of plagiarism in 2009. Over 20 years after she broke Biden\textquoteright s
+story, an online Sunday column on the New York Times website showed
+striking similarities to a story on the Talking Points Memo website.
+There was a word-for-word paragraph in both with just small change.
+Her defense? A friend who helped her write the column must have seen
+the Talking Points Memo post and \textquotedblleft accidentally\textquotedblright{}
+integrated it into Dowd\textquoteright s column. 
+\item George Harrison and The Chiffons George Harrison\textquoteright s
+first post-Beatles single \textquotedblleft My Sweet Lord\textquotedblright{}
+was released in 1971. Although the song hit \#1 on the charts, it
+bore striking music resemblance to \textquotedblleft He\textquoteright s
+So Fine\textquotedblright{} recorded by the Chiffons and released
+in 1962. It didn\textquoteright t take long for the Chiffons to sue
+for copyright infringement. The suit included George Harrison, Apple
+Records, BMI and Hansen Publications and finally went to court in
+1976. The judge found that Harrison did not intend to plagiarize but
+may have done so subconsciously. Harrison had to pay the Chiffons
+\$587,000. 
+\item Coldplay and Joe Satriani Coldplay\textquoteright s 2008 song \textquotedblleft Viva
+la Vida\textquotedblright{} was a hit, but also had a very similar
+chord progression to a song by guitarist Joe Satriani. Satriani\textquoteright s
+song \textquotedblleft If I Could Fly\textquotedblright{} was released
+in 2004. The day after Coldplay received nominations for seven Grammy
+awards, Satriani filed suit. The court dismissed the case without
+prejudice in 2009. 
+\end{enumerate}
+
+\subsection{\label{sub:Factor-to-Plagiarise}Factor to Plagiarise}
+
+Bennett conducted a detailed literature review on factors motivating
+students to plagiarise and classified these factors into five categories
+\citep{Georgina}:
+\begin{enumerate}
+\item Means and opportunity: the fact that resources are readily available
+and easily accessible by students over the Internet makes it convenient
+for students to gain instant and easy access to large amounts of information
+from many sources. Furthermore, many Internet sites exist that provide
+essays to students, and also many of these sites provide chargeable
+services to students for writing their essays and papers. 
+\item Personal traits: factors such as the desire to gain high marks, fear
+of failure, pressure from family members, desire to achieve future
+job prospects and career development, and competitive behaviour amongst
+students can cause them to plagiarise. 
+\item Individual circumstances: students who work to finance their studies
+have less time to study and time pressures can cause them to cheat. 
+\item Academic integration: students that do not integrate or \textquoteleft fit
+in\textquoteright{} with University life, and are therefore alienated
+from their courses or instructors, are more likely to cheat than students
+who are better integrated in University life. 
+\item Other factors: these include the student\textquoteright s previous
+experiences of plagiarism prior to attending higher education, their
+education experience of developing good writing skills, their nationality
+(i.e. foreign students with language difficulties are more likely
+to cheat than home students fluent in the language). Other factors
+include age and gender. 
+\end{enumerate}
+
+\subsection{\label{sub:Plagiarism-in-Source}Plagiarism in Source Code}
+
+Survey result by Georgina Cosma and Mike Joy of source-code plagiarism
+in programming assignments is plagiarism can occur when a student
+refuses source-code authored by someone else and, intentionally or
+unintentionally, fails to acknowledge it adequately, thus submitting
+it as his/her own work. This involves obtaining the source-code, either
+with or without the permission of the original author, and reusing
+source-code produced as part of another assessment (in which academic
+credit was gained) without adequate acknowledgement. \citep{GeorginaMike}.
+\begin{enumerate}
+\item Reusing 
+
+\begin{enumerate}
+\item Reproducing or copying source code without making any alterations. 
+\item Reproducing or copying source-code and adapting it minimally or moderately;
+minimal or moderate adaptation occurs when the source-code authored
+by someone else. 
+\item Converting all or part of someone else\textquoteright s source-code
+to a different programming language may constitute plagiarism, depending
+on the similarity between the languages and the effort required by
+the student to do the conversion. Conversion may not constitute plagiarism
+if the student borrows ideas and inspiration from source-code written
+in another programming language and the source-code is entirely authored
+by the student. 
+\item Generating source-code automatically by using code-generating software;
+this could be construed as plagiarism if the use of such software
+is not explicitly permitted in the assignment specification. 
+\end{enumerate}
+\item Obtaining 
+
+
+Obtaining the source-code either with or without the permission of
+the original author includes the following : 
+\begin{enumerate}
+\item Paying another individual to create a part of or all their source-code 
+\item Stealing another student\textquoteright s source-code 
+\item Collaborating with one or more students to create a programming assignment
+which required students to work individually, resulting in the students
+submitting similar source-codes; such inappropriate collaboration
+may constitute plagiarism or collusion (the name of this academic
+offense varies according to the local academic regulations). 
+\item Exchanging parts of source-code between students in different groups
+carrying out the same assignment with or without the consent of their
+fellow group members.
+\end{enumerate}
+\item Inadequately Acknowledging 
+
+
+Inadequately acknowledging source-code authorship includes the following
+: 
+\begin{enumerate}
+\item Failing to cite the source and authorship of the source-code, within
+the program source-code (in the form of an-in-text citation within
+a comment) and in the appropriate documentation. 
+\item Providing fake references (i.e., references that were made-up by the
+student and that do not exist); this is a form of academic offense,
+often referred to as fabrication, which may co-occur wih plagiarism. 
+\item Providing falsereferences (i.e., references exist but do not match
+the source-code that was copied); another form of academic offense,
+often reffered to as falsification, which may co-occur with plagiarism. 
+\item Modifying the program output to make it seem as if the program works
+when it is not working; this too is a form of academic offense akin
+to falsification, which may co-occur with plagiarism. 
+\end{enumerate}
+\end{enumerate}
+According to Jones \citet{Georgina}, \textquotedblleft A plagiarized
+program is either an exact copy of the original, or a variant obtained
+by applying various textual transformations\textquotedblright . Jones
+provides the following list of transformations:
+\begin{enumerate}
+\item Verbatim copying, 
+\item Changing comments, 
+\item Changing white space and formatting, 
+\item Renaming identifiers, 
+\item Reordering code blocks, 
+\item Reordering statements within code blocks, 
+\item Changing the order of operands/operators in expressions, 
+\item Changing data types, 
+\item Adding redundant statements or variables, and 
+\item Replacing control structures with equivalent structures. 
+\end{enumerate}
+
+\section{\label{sec:Java}Java}
+
+James Gosling initiated the Java language project in June 1991 for
+use in one of his many set-top box projects. The language, initially
+called Oak after an oak tree that stood outside Gosling's office,
+also went by the name Green and ended up later being renamed as Java,
+from a list of random words. Sun released the first public implementation
+as Java 1.0 in 1995. It promised Write Once, Run Anywhere (WORA),
+providing no-cost run-times on popular platforms. On 13 November 2006,
+Sun released much of Java as free and open source software under the
+terms of the GNU General Public License (GPL). On 8 May 2007, Sun
+finished the process, making all of Java's core code free and open-source,
+aside from a small portion of code to which Sun did not hold the copyright.
+\citep{TutorialJava} .
+
+
+\subsection{\label{sub:Characters-of-Java}Characters of Java}
+
+Java has many characters such as : 
+\begin{enumerate}
+\item Object Oriented: In Java, everything is an Object. Java can be easily
+extended since it is based on the Object model. 
+\item Platform independent: Unlike many other programming languages including
+C and C++, when Java is compiled, it is not compiled into platform
+specific machine, rather into platform independent byte code. This
+byte code is distributed over the web and interpreted by virtual Machine
+(JVM) on whichever platform it is being run. 
+\item Simple: Java is designed to be easy to learn. If you understand the
+basic concept of OOP, Java would be easy to master. 
+\item Secure: With Java's secure feature, it enables to develop virus-free,
+tamper-free systems. Authentication techniques are based on public-key
+encryption. 
+\item Architectural-neutral: Java compiler generates an architecture-neutral
+object file format, which makes the compiled code to be executable
+on many processors, with the presence of Java runtime system. 
+\item Portable: Being architectural-neutral and having no implementation
+dependent aspects of the specification makes Java portable. Compiler
+in Java is written in ANSI C with a clean portability boundary which
+is a POSIX subset. 
+\item Robust: Java makes an effort to eliminate error prone situations by
+emphasizing mainly on compile time error checking and runtime checking. 
+\item Multithreaded: With Java's multithreaded feature, it is possible to
+write programs that can do many tasks simultaneously. This design
+featu\citet{TutorialJava}re allows developers to construct smoothly
+running interactive applications. 
+\item Interpreted: Java byte code is translated on the fly to native machine
+instructions and is not stored anywhere. The development process is
+more rapid and analytical since the linking is an incremental and
+lightweight process. 
+\item High Performance: With the use of Just-In-Time compilers, Java enables
+high performance. 
+\item Distributed: Java is designed for the distributed environment of the
+internet. 
+\item Dynamic: Java is considered to be more dynamic than C or C++ since
+it is designed to adapt to an evolving environment. Java programs
+can carry extensive 
+\end{enumerate}
+
+\section{\label{sec:Tools}Tools }
+
+The tools used in the making this application as follows : 
+
+
+\subsection{\label{sub:Unified-Modeling-Language}Unified Modeling Language }
+
+The Unified Modeling Language (UML) is a graphical notation for drawing
+diagrams of software concepts. One can use it for drawing diagrams
+of a problem domain, a proposed software design, or an already completed
+software implementation. \citep{Robert}.
+
+
+\subsubsection{\label{sub:Use-Case-Diagram}Use Case Diagram }
+
+A use case is a description of the behavior of a system. That description
+is written from the point of view of a user who has just told the
+system to do something particular. A use case captures the visible
+sequence of events that a system goes through in response to a single
+user stimulus. A visible event is an event that the user can see.
+\citep{James}. Table \ref{tab:Notation-of-Use} shows the notation
+of use case diagram which consists of seven notation they are actor,
+use case, interaction, dependency, association, generalization, and
+realization. \citep{TutorialUML}.
+
+\begin{table}[!tph]
+\begin{centering}
+\protect\caption{\label{tab:Notation-of-Use}Notation of Use Case Diagram }
+
+\par\end{centering}
+
+\centering{}%
+\begin{tabular}{|>{\centering}p{1cm}|>{\centering}m{4cm}|>{\centering}m{7cm}|}
+\hline 
+No & Notation & Description\tabularnewline
+\hline 
+\hline 
+1. & \includegraphics[scale=0.4]{\string"gambar ika/actor\string".png} & An actor can be defined as some internal or external entity that interacts
+with the system.\tabularnewline
+\hline 
+2. & \includegraphics[scale=0.5]{\string"gambar ika/usecase\string".png} & Use Case represents a set of actions performed by a system for a specific
+goal.\tabularnewline
+\hline 
+3. & \includegraphics[scale=0.7]{\string"gambar ika/interaction\string".png} & Interaction is defined as a behavior that consistsof a group of messages
+exchanged among elements to accomplish a specific task.\tabularnewline
+\hline 
+4. & \includegraphics[scale=0.7]{\string"gambar ika/dependecy\string".png} & Dependency is a relationship between two things in which change in
+one element also affects the other one.\tabularnewline
+\hline 
+5. & \includegraphics[scale=0.7]{\string"gambar ika/association\string".png} & Association is basically a set of links that connects elements of
+an UML model. It also describes how many objects are taking part in
+that relationship.\tabularnewline
+\hline 
+6. & \includegraphics[scale=0.7]{\string"gambar ika/generalization\string".png} & Generalization can be defined as a relationship which connects a specialized
+element with a generalized element. It basically describes inheritance
+relationship in the world of objects. \tabularnewline
+\hline 
+7. & \includegraphics[scale=0.7]{\string"gambar ika/realization\string".png} & Realization can be defined as a relationship in which two elements
+are connected. One element describes some responsibility which is
+not implemented and the other one implements them. \tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+
+
+\subsubsection{\label{sub:Class-Diagram}Class Diagram}
+
+A class diagram is a graphic presentation of the static view that
+shows a collection of declarative (static) model elements, such as
+classes, types, and their contents and relationships. A class diagram
+may show a view of a package and may contain symbols for nested packages.
+A class diagram contains certain reified behavioral elements, such
+as operations.\citep{James}. Table \ref{tab:Notation-of-Class} consists
+of three columns : number, notation and description about notation
+of class diagram. \citep{TutorialUML}.
+
+\begin{table}[!tph]
+
+
+\protect\caption{\label{tab:Notation-of-Class}Notation of Class Diagram }
+
+
+\begin{centering}
+\begin{tabular}{|>{\centering}p{1cm}|>{\centering}m{5cm}|>{\centering}m{6cm}|}
+\hline 
+No & Notation & Description\tabularnewline
+\hline 
+\hline 
+1. & \includegraphics[scale=0.4]{\string"gambar ika/class\string".png} & Class represents set of objects having similar responsibilities.\tabularnewline
+\hline 
+2. & \includegraphics[scale=0.7]{\string"gambar ika/interaction\string".png} & Interaction is defined as a behavior that consistsof a group of messages
+exchanged among elements to accomplish a specific task.\tabularnewline
+\hline 
+3. & \includegraphics[scale=0.7]{\string"gambar ika/generalization\string".png} & Generalization can be defined as a relationship which connects a specialized
+element with a generalized element. It basically describes inheritance
+relationship in the world of objects.\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\end{table}
+
+
+
+\subsection{\label{sub:Flowchart}Flowchart}
+
+Flowcharts are usually drawn using some standard symbols; however,
+some special symbols can also be developed when required. Some standard
+symbols, which are frequently required for flowcharting many computer
+programs are shown in Table \ref{tab:Flowchart} \citep{Mumbai}.
+
+\begin{table}[!tph]
+\protect\caption{\label{tab:Flowchart}Flowchart }
+
+
+\begin{centering}
+\begin{tabular}{|>{\centering}p{1cm}|>{\centering}m{5cm}|>{\centering}m{6cm}|}
+\hline 
+No & Flowchart & Description\tabularnewline
+\hline 
+\hline 
+1. & \includegraphics[scale=0.7]{\string"gambar ika/1\string".png} & Terminator: An oval flow chart shape indicates the start or end of
+the process, usually containing the word \textquotedblleft Start\textquotedblright{}
+or \textquotedblleft End\textquotedblright .\tabularnewline
+\hline 
+2. & \includegraphics[scale=0.7]{\string"gambar ika/2\string".png} & Process: A rectangular flow chart shape indicates a normal/generic
+process flow step. For example : \textquotedblleft Add 1 to X\textquotedblright ,
+\textquotedblleft M = M{*}F\textquotedblright{} or similar.\tabularnewline
+\hline 
+3. & \includegraphics[scale=0.7]{\string"gambar ika/3\string".png} & Decision: A diamond flow chart shape indicates a branch in the process
+flow. This symbol is used when a decision needs to be made, commonly
+a Yes/No question or True/False test.\tabularnewline
+\hline 
+4. & \includegraphics[scale=0.7]{\string"gambar ika/4\string".png} & Connector: A small, labelled, circular flow chart shape used to indicate
+a jump in the process flow. Connectors are generally used in complex
+or multi-sheet diagrams.\tabularnewline
+\hline 
+5. & \includegraphics[scale=0.7]{\string"gambar ika/5\string".png} & Data: A parallelogram that indicates data input or output (I/O) for
+a process. Examples: Get X from the user, Display X.\tabularnewline
+\hline 
+6. & \includegraphics[scale=0.7]{\string"gambar ika/6\string".png} & Delay: used to indicate a delay or wait in the process for input from
+some other process.\tabularnewline
+\hline 
+7. & \includegraphics[scale=0.7]{\string"gambar ika/7\string".png} & Arrow: used to show the flow of control in a process. An arrow coming
+from one symbol and ending at another symbol represents that control
+passes to the symbol the arrow points to.\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\end{table}
+
+
+
+\subsection{\label{sub:Levenshtein-Algorithm}Levenshtein Algorithm}
+
+The Levenshtein Distance Algorithm (LD) measure the similarity between
+source string(s) and target string (t).The similarity between two
+strings is measured as distance between source and target string.
+Number of substitutions, insertion and deletion required to convert
+source strong into target string are referred as difference between
+these files. The Levenshtein Algorithm result increase with difference
+between the strings. If source string(s) is \char`\"{}fellow\char`\"{}
+and target string (t) is \char`\"{}follow\char`\"{} then LD=1. It
+means that one substitution is required to change source string into
+target string. If s is \char`\"{}this thesis is related to plagiarism\char`\"{}
+and t is \char`\"{}the thesis is about plagiarism\char`\"{}, then
+LD (s,t) = 10. Levenshtein distance was used in Plagiarism Detection.
+It is also been used in Spell Checking, Speech recognition and DNA
+Analysis. \citep{Ahmad}.
+
+
+\subsubsection{\label{sub:The-Levenshtein-Algorithm}The Levenshtein Algorithm }
+
+An algorithm of Levenshtein Distance divided into seven steps : 
+\begin{enumerate}
+\item \textquotedblleft Set n to be the length of s. 
+
+
+Set m to be the length of t.
+
+
+If n = 0, return m and exit. 
+
+
+If m = 0, return n and exit. 
+
+\item Initialize the first row to 0..n. 
+
+
+Initialize the first column to 0..m. 
+
+\item Examine each character of s (i from 1 to n). 
+\item Examine each character of t (j from 1 to m). 
+\item If s{[}i{]} equals t{[}j{]}, the cost is 0. 
+
+
+If s{[}i{]} does not equal t{[}j{]}, the cost is 1. 
+
+\item Set cell d{[}i,j{]} of the matrix equal to the minimum of: 
+
+\begin{enumerate}
+\item The cell immediately above plus 1: d{[}i-1,j{]} + 1. 
+\item The cell immediately to the left plus 1: d{[}i,j-1{]} + 1. 
+\item The cell diagonally above and to the left plus the cost: d{[}i-1,j-1{]}
++ cost. 
+\end{enumerate}
+\item After the iteration steps (3, 4, 5, 6) are complete, the distance
+is found in cell d{[}n,m{]}.\textquotedblright{} 
+\end{enumerate}
+
+\subsection{\label{sub:Netbeans}Netbeans}
+
+Two kinds of netbeans are Netbeans IDE and Netbeans Platform. The
+NetBeans IDE is an open-source integrated development environment,
+it supports development of all Java application types (Java SE including
+JavaFX, (Java ME, web, EJB and mobile applications) out of the box.
+Among other features are an Ant-based project system, Maven support,
+refactorings, version control (supporting CVS, Subversion, Mercurial
+and Clearcase). The NetBeans Platform is a reusable framework for
+simplifying the development of Java Swing desktop applications. The
+NetBeans IDE bundle for Java SE contains what is needed to start developing
+NetBeans plugins and NetBeans Platform based applications; no additional
+SDK is required. \citep{Rahul}.
+
+
+\subsubsection{\label{sub:Advantages-of-Netbeans}Advantages of Netbeans IDE}
+
+The NetBeans integrated development environment (IDE) delivers. The
+NetBeans IDE can boost a productivity when working with Java SE, Java
+EE, or Java ME technology as well as PHP, Groovy, JavaScript, and
+C/C++. The advantages of using Netbeans IDE also the reasons to use
+the NetBeans IDE are \citep{Netbeans} :
+\begin{enumerate}
+\item Works Out of the Box Simply download and install the NetBeans IDE
+and you are good to go. Installation is a breeze with its small download
+size. All IDE tools and features are fully integrated\textemdash no
+need to hunt for plug-ins\textemdash and they work together when you
+launch the IDE. 
+\item Free and Open Source When you use the NetBeans IDE, you join a vibrant,
+open-source community of thousands of users ready to help and contribute.
+There are discussions on the NetBeans mailing lists, blogs on PlanetNetBeans,
+and helpful FAQs. 
+\item Connected Developer The NetBeans IDE is the tool of choice for teams
+working in a collaborative environment. You can create and manage
+java.net-hosted projects, for example; file issue tracking reports
+using both Jira and Bugzilla, and collaborate with like-minded developers\textemdash all
+directly from within the familiar interface of the IDE. 
+\item Powerful GUI Builder The GUI Builder (formerly known as Project Matisse)
+supports a sophisticated yet simplified Swing Application Framework
+and Beans Binding. Now you can build GUIs in a natural way. 
+\item Support for Java Standards and Platforms The IDE provides end-to-end
+solutions for all Java development platforms including the latest
+Java standards. 
+
+\begin{enumerate}
+\item Java Mobility Support Complete environment to create, test, and run
+applications for mobile devices. With preprocessor blocks, you can
+readily handle fragmentation issues. Support for Java Mobility development
+is the best among all Java development tools.
+\item Java Enterprise Edition (EE) 6 support: The first free, open-source
+IDE to support Java EE 6 specifications. 
+\item Java Standard Edition (SE) Support: You can develop applications using
+the latest Java SE standards. 
+\end{enumerate}
+\item Profiling and Debugging Tools With NetBeans IDE profiler, you get
+realtime insight into memory usage and potential performance bottlenecks.
+Furthermore, you can instrument specific parts of code to avoid performance
+degradation during profiling. The HeapWalker tool helps you evaluate
+Java heap contents and find memory leaks. 
+\item Dynamic Language Support The NetBeans IDE provides integrated support
+for scripting languages such as PHP, Groovy, and JavaScript. 
+
+\begin{enumerate}
+\item PHP: With the NetBeans IDE for PHP, you get the best of both worlds:
+the productivity of an IDE (code completion, real-time error checking,
+debugging and more) with the speed and simplicity of your favorite
+text editor in a less than 30mb download. 
+\item JavaScript: The NetBeans IDE has the JavaScript tools you need: an
+intelligent JavaScript editor, CSS/HTML code completion, the ability
+to debug JavaScript in Firefox and IE, and bundled popular JavaScript
+libraries. Your favorite JavaScript framework will get you 80\% of
+the way, NetBeans IDE will help you with that last 20\%. 
+\item Groovy: In the NetBeans IDE, you can now create Grails applications,
+integrate Groovy scripts with your JavaSE project. 
+\end{enumerate}
+\item Extensible Platform Start with its extensible platform and add your
+own NetBeans IDE features and extensions or build an IDE-like application,
+keeping only features you want. Extending the platform and its Swing-based
+foundation saves development time and can optimize performance. 
+\item Customizable Projects Through the NetBeans IDE build process, which
+relies on industry standards such as Apache Ant, make, Maven, and
+rake, rather than a proprietary build process, you can easily customize
+projects and add functionality. You can build, run, and deploy projects
+to servers outside of the IDE. 
+\item Non-Java Code Support You're not limited to the Java programming language.
+You can include many other programming languages, such as C/C++, scripting
+languages like JavaScript, etc. Even more exciting, define your own
+language and include it in your projects. 
+\item Dedicated Support Available When you can't get the help you need from
+the community, consider Developer Support Packages, which offer programming
+advice, software support, and training credits.
+\end{enumerate}
+
+\subsubsection{\label{sub:Netbeans-IDE-versi}Netbeans IDE versi 7.3 }
+
+NetBeansTM IDE is a modular, standards-based integrated development
+environment (IDE), written in the JavaTM programming language. The
+NetBeans project consists of a full-featured open source IDE written
+in the Java programming language and a rich client application platform,
+which can be used as a generic framework to build any kind of application.
+Figure \ref{fig:Netbeans-IDE-7.3} show the appearance of Netbeans
+IDE 7.3. \citep{Netbeans}
+
+\begin{figure}[!tph]
+\includegraphics[scale=0.39]{\string"gambar ika/netbeans\string".png}
+
+\centering{}\protect\caption{\label{fig:Netbeans-IDE-7.3}Netbeans IDE 7.3}
+\end{figure}
+NetBeans IDE 7.3 supports the technologies in Table \ref{tab:Supported-Technologies-of}
+and has been tested with application servers described in Table 2.5
+: 
+
+\begin{table}[!tph]
+\protect\caption{\label{tab:Supported-Technologies-of}Supported Technologies of Netbeans}
+
+
+\centering{}%
+\begin{tabular}{|>{\centering}p{2cm}|>{\centering}p{8cm}|}
+\hline 
+\multicolumn{2}{|>{\centering}p{10cm}|}{Supported Technologies}\tabularnewline
+\hline 
+\hline 
+1. & Java EE 7, Java EE 6, Java EE 5 and J2EE 1.4\tabularnewline
+\hline 
+2. & JavaFX 2.2.x\tabularnewline
+\hline 
+3. & Java ME SDK 3.2\tabularnewline
+\hline 
+4. & Java Card 3 SDK\tabularnewline
+\hline 
+5. & Struts 1.3.10\tabularnewline
+\hline 
+6. & Spring 3.1, 2.5\tabularnewline
+\hline 
+7. & Hibernate 3.2.5\tabularnewline
+\hline 
+8. & Java API for RESTful Web Services (JAX-RS) 1.1\tabularnewline
+\hline 
+9. & Java Wireless Toolkit 2.5.2 for CLDC\tabularnewline
+\hline 
+10. & Issue Tracking\tabularnewline
+\hline 
+11. & Bugzilla 4.0.x and earlier\tabularnewline
+\hline 
+12. & Git 1.7.\textcyr{\char245}\tabularnewline
+\hline 
+13. & Jira 5.0 and earlier\tabularnewline
+\hline 
+14. & PHP 5.4, 5.3, 5.2, 5.1\tabularnewline
+\hline 
+15. & Groovy 1.8.6\tabularnewline
+\hline 
+16. & Grails 2.0\tabularnewline
+\hline 
+17. & Apache Ant 1.8.4\tabularnewline
+\hline 
+18. & Apache Maven 3.0.4 and earlier\tabularnewline
+\hline 
+19. & C/C++/Fortran\tabularnewline
+\hline 
+20. & VCS\tabularnewline
+\hline 
+21. & Subversion: 1.7.x, 1.6.x\tabularnewline
+\hline 
+22. & Mercurial: 2.2.x and earlier\tabularnewline
+\hline 
+23. & ClearCase V7.0\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+
+\begin{table}[!tph]
+
+
+\protect\caption{Tested Application Servers of Netbeans}
+
+
+\begin{centering}
+\begin{tabular}{|>{\centering}p{2cm}|>{\centering}p{8cm}|}
+\hline 
+\multicolumn{2}{|>{\centering}p{10cm}|}{Tested Application Servers}\tabularnewline
+\hline 
+\hline 
+1. & GlashFish Server Open Source Edition 4.0\tabularnewline
+\hline 
+2. & WebLogic 12c\tabularnewline
+\hline 
+3. & Jboss AS 7\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\end{table}
+
+
+
+\subsection{\label{sub:MySQL}MySQL}
+
+MySQL is a fast, easy-to-use Relational DataBase Management System
+(RDMS) being used for many small and big businesses. MySQL is developed,
+marketed, and supported by MySQL AB, which is a Swedish company. \citep{TutorialMYSQL}.
+MySQL is becoming so popular because of many good reasons: 
+\begin{enumerate}
+\item MySQL is released under an open-source license. 
+\item MySQL is a very powerful program in its own right. It handles a large
+subset of the functionality of the most expensive and powerful database
+packages. 
+\item MySQL uses a standard form of the well-known SQL data language. 
+\item MySQL works on many operating systems and with many languages including
+PHP, PERL, C, C++, JAVA, etc. 
+\item MySQL works very quickly and works well even with large data sets. 
+\item MySQL is very friendly to PHP, the most appreciated language for web
+development. 
+\item MySQL supports large databases, up to 50 million rows or more in a
+table. The default file size limit for a table is 4GB, but you can
+increase this (if your operating system can handle it) to a theoretical
+limit of 8 million terabytes (TB). 
+\item MySQL is customizable. The open-source GPL license allows programmers
+to modify the MySQL software to fit their own specific environments. 
+\end{enumerate}
+
+\subsection{\label{sub:JDBC}JDBC}
+
+JDBC stands for Java Database Connectivity, which is a standard Java
+API for database-independent connectivity between the Java programming
+language and a wide range of databases. \citep{TutorialJDBC}. The
+JDBC library includes APIs for each of the tasks commonly associated
+with database usage: 
+\begin{enumerate}
+\item Making a connection to a database 
+\item Creating SQL or MySQL statements 
+\item Executing that SQL or MySQL queries in the database 
+\item Viewing \& Modifying the resulting records 
+\end{enumerate}
+
+\subsection{PhpMyAdmin}
+
+PhpMyAdmin is a free software tool written in PHP, intended to handle
+the administration of MySQL over the Web. phpMyAdmin supports a wide
+range of operations on MySQL, MariaDB and Drizzle. Frequently used
+operations (managing databases, tables, columns, relations, indexes,
+users, permissions, etc) can be performed via the user interface,
+while user still have the ability to directly execute any SQL statement.
+\citep{PhpMyAdmin}.
+
+
+\subsection{\label{sub:XAMPP}XAMPP}
+
+XAMPP is a small and light Apache distribution containing the most
+common web development technologies in a single package. Its contents,
+small size, and portability make it the ideal tool for students developing
+and testing applications in PHP and MySQL. XAMPP is available as a
+free download in two specific packages: full and lite. \citep{Dalibor}. 
+
+
+\section{\label{sec:Existing-Plagiarism-Detector}Existing Plagiarism Detector}
+
+An example of existing plagiarism detector of source code are \citep{Ahmad}
+: 
+\begin{enumerate}
+\item SIM (Software Similarity Tester) SIM is used to detect plagiarism
+of code written in Java, C, Pascal, Modula-2, Lisp, and Miranda. SIM
+is also used to check similarity between plain text files. SIM converts
+the six source code into strings of token and then compare these strings
+by using dynamic programming string alignment technique. This technique
+is also used in DNA string matching. The alignment is very expensive
+and exhaustive computationally for all applications because for large
+code repositories SIM is not scalable. The source code of SIM is available
+publically but it is no more actively supported. 
+\item MOSS (Measure of Software Quality) MOSS is available free to use in
+academics and it is accessible as an online service. Moss support
+Ada programs, Java, C, C++, plain text and Pascal. At the same time
+MOSS also support UNIX and windows operating systems. First of all
+MOSS convert source code into tokens and then use robust winnowing
+algorithm. Robust Winnowing Algorithm is introduced by Schleimeretal
+but the internal detail of working of this algorithm is confidential.
+This algorithm takes the document fingerprints by selecting a subset
+of token hashes. In the comparing process of set of files, \textquotedblleft MOSS
+creates an inverted index to map document fingerprints to documents
+and their positions within each document. Next, each program file
+is used as a query against this index, returning a list of documents
+in the collection having fingerprints in common with the query.\textquotedblright{}
+The number of matching fingerprints of each pair of document in the
+set of files is the result of MOSS. MOSS sort these results and show
+highest-score matches to user. 
+\item JPlag JPlag is available publically as free accessible service. JPlag
+can be used to check plagiarism of source code written in C, C++,
+Scheme and Java. First of all source code in the directory is parsed
+and then transformed into token strings. After transformation JPlag
+compare these strings by using Running Karp-Rabin Greedy String Tiling
+(RKR-RGST) algorithm. The comparison result then shown in HTML file,
+which can be visited by using any browser. In the HTML file of results
+main page consist of pairs of programs that are assume to be plagiarized.
+User can see results of different pairs separately. Different fonts
+in result file of HTML shows different things, like the pairs with
+similar code will have different font from other pairs. In this way
+user can analyze results very easily. JPlag has been used extensively
+by various academic institutions, both at the undergraduate and the
+graduate level, reaching the submissions as many as 500 participants
+since fall 2001, receiving and processing dozens of submission each
+month. 
+\end{enumerate}
+\begin{onehalfspace}
+
+\chapter{Analysis and Design}
+\end{onehalfspace}
+
+
+\section{\label{sec:General-Description}General Description}
+
+Current plagiarisim detection of source code manually is by reading
+and comparing the source code line by line as shown in Figure \ref{fig:Check-File-Manually}.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics{\string"gambar ika/manual\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Check-File-Manually}Check File Manually}
+\end{figure}
+
+
+The biggest obstacle faced is how if the source code to be tested
+consists of hundreds or even thousands of lines? Surely, it will take
+a long time, besides one of human nature is a decreased level of concentration
+as time goes by. So that errors can occur when testing a large source
+code. The purpose of this application is to help users to test the
+source code quickly and accurately.
+
+
+\section{\label{sec:Analysis-of-Requirements}Analysis of Requirements}
+
+At the stage of the analysis requirements will analyze all requirements
+and what user expected from the application. Requirements are divided
+into two types, they are functional requirements and non-functional
+requirements.
+
+
+\subsection{\label{sub:Functional-Requirements}Functional Requirements}
+
+Data collection techniques for functional requirements of users in
+this plagiarism detection named Dj for Detector of Java is obtained
+by distributing questionnaires to candidate users, so the features
+that are expected to be obtained . One of the results obtained is
+largely users are already familiar with the Java programming language.
+Other results are shown in Table \ref{tab:Table-3.1-Functional} that
+is a list of features that are obtained from the distribution of questionnaires.
+\begin{table}[!tph]
+\begin{centering}
+\protect\caption{\label{tab:Table-3.1-Functional}Table 3.1 Functional Requirements}
+
+\par\end{centering}
+
+\noindent \centering{}%
+\begin{tabular*}{12cm}{@{\extracolsep{\fill}}|c|>{\centering}m{4cm}|>{\raggedright}m{5cm}|}
+\hline 
+\multirow{1}{*}{No } & Feature & \centering{}Information\tabularnewline
+\hline 
+\hline 
+1. & Input a Threshold & \centering{}User can input a value of threshold.\tabularnewline
+\hline 
+2. & Save in Database  & \centering{}Files .java that tested will be saved automatically in
+the database. \tabularnewline
+\hline 
+3. & Menu to Search & \centering{}Searching file by name or size. \tabularnewline
+\hline 
+4. & Menu to Delete & \centering{}Delete file from database. \tabularnewline
+\hline 
+5. & Showing the Content of File & \centering{}Showing content of two files, source code and target code. \tabularnewline
+\hline 
+\end{tabular*}
+\end{table}
+
+
+All the features contained in Table 3.1 will be found on this Dj application. 
+
+
+\subsection{\label{sub:Non-Functional-Requirements}Non Functional Requirements}
+
+Beside of functional requirements, an analysis of the non-functional
+requirements that are needed by the application also performed. One
+of non-functional requirements of these application is user friendly,
+furthermore is described in Table \ref{tab:Table-3.2-Non-Functional}
+a list of the minimum hardware and software.
+
+\begin{table}[!tph]
+
+
+\protect\caption{\label{tab:Table-3.2-Non-Functional}Table 3.2 Non-Functional Requirements}
+
+
+\centering{}%
+\begin{tabular}{|c|c|c|}
+\hline 
+No & Hardware & Software\tabularnewline
+\hline 
+\hline 
+1. & Processor Intel Pentium 4 & Microsoft Windows 7 \tabularnewline
+\hline 
+2. & Memory 2 GB & NetBeans IDE 7 \tabularnewline
+\hline 
+3. & - & XAMPP \tabularnewline
+\hline 
+4. & - & JDBC\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+
+
+\section{\label{sec:Application-Development}Application Development}
+
+Development in this Dj application is to implement the Levenshtein
+Distance algorithm. But previously done some pre-processing stage.
+The stages performed in this application can be seen in Figure \ref{fig:Steps-in-Development}.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{Dia/stepDevelopment}
+\par\end{centering}
+
+\protect\caption{\label{fig:Steps-in-Development}Steps in Development Stage}
+\end{figure}
+
+
+The first third stages contained in Figure \ref{fig:Steps-in-Development}
+is a pre-processing stage. Next will be processed by the Levenshtein
+Distance algorithm and final stage is comparing the result with the
+threshold value.
+
+
+\subsection{\label{sub:Delete-Comments}Delete Comments}
+
+In this stage, the application will look for comments on both of source
+code and target code by finding the \char`\"{}\textbackslash{}\textbackslash{}\char`\"{}
+or \char`\"{}\textbackslash{} {*} .. {*} \textbackslash{}\char`\"{}
+then delete it as described in Figure \ref{fig:Algorithm-of-Delete}.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{Dia/deleteComment}
+\par\end{centering}
+
+\protect\caption{\label{fig:Algorithm-of-Delete}Algorithm of Delete Comment in Application}
+
+
+\end{figure}
+
+
+
+\subsection{\label{sub:Rename-All-Words}Rename All Words except Reserved Words}
+
+There is a list of reserved words in Java, this application will search
+for all the words besides the reserved words listed then replace it
+with another word, but in this application will be replaced with \textquotedblleft aa\textquotedblright{}
+then rewrite in new file. Figure \ref{fig:Algorithm-of-Rename} described
+the algorithm of this stage.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{Dia/Rename}
+\par\end{centering}
+
+\protect\caption{\label{fig:Algorithm-of-Rename}Algorithm of Rename All Words Except
+Reserved Words}
+
+
+\end{figure}
+
+
+
+\subsection{\label{sub:Sort-by-Size}Sort by Size}
+
+The next stage is sorting by size, this stage will sort functions
+or methods according to the size from smallest to largest. Figure
+\ref{fig:Algorithm-of-Sort} described that the end of this stage,
+all sorted method will be rewritten.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{Dia/sortBySize}
+\par\end{centering}
+
+\protect\caption{\label{fig:Algorithm-of-Sort}Algorithm of Sort Methods}
+
+
+\end{figure}
+
+
+
+\subsection{\label{sub:Implementation-Levenshtein-Dista}Implement Levenshtein
+Distance}
+
+This stage is the stage of implement of the Levenshtein Distance algorithm
+to the source code and the target code, but before getting to this
+stage, both of file has been modified into a string. The Levenshtein
+Distance Algorithm (LD) measure the similarity between source string
+(s) and target string (t). The similarity between two strings is measured
+as distance between source string and target string. Figure \ref{fig:Algorithm-of-Levenshtein}
+shows a Levenshtein Distance algorithm \citet{Ahmad}.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.35]{Dia/levenshteinDistance}
+\par\end{centering}
+
+\protect\caption{\label{fig:Algorithm-of-Levenshtein}Algorithm of Levenshtein Distance}
+\end{figure}
+
+
+The goal is to calculate the similarity of two strings. As we know
+that Levenshtein Distance algorithm gives a difference between two
+strings. In Figure \ref{fig:Algorithm-of-Levenshtein} the result
+is a distance called Diff, which will be used in the following formula
+to get plagiarized value with Max(CS,ST) is the larger length value
+of either of target string or of source string. 
+
+\begin{center}
+Plagiarized Value =$\left\{ 1-\frac{Diff}{Max(CS,ST}\right\} *100$
+\par\end{center}
+
+
+\subsection{\label{sub:Compare-with-the}Compare with the Threshold}
+
+Figure \ref{fig:Algorithm-of-Compare} is the last stage, it compares
+the result obtained from the four previous stages with the threshold
+value entered by the user. If the threshold is greater than the result
+then the target code is not considered as plagiarism, in contrast
+the target code is plagiarism.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{Dia/compareWithThreshold}
+\par\end{centering}
+
+\protect\caption{\label{fig:Algorithm-of-Compare}Algorithm of Compare Result with
+Threshold}
+\end{figure}
+
+
+
+\section{\label{sec:Application-Design}Application Design}
+
+This application design using UML (Unified Modeling Language) and
+Flowchart Diagram.
+
+
+\subsection{\label{sub:Unified-Modeling-Language-1}Unified Modeling Language}
+
+Unified Modeling Language (UML) used in this application design are
+Use Case Diagram and Class Diagram.
+
+
+\subsubsection{\label{sub:Use-Case-Diagram-1}Use Case Diagram Design}
+
+A use case is a description of the behavior of a application. That
+description is written from the point of view of a user who has just
+told the application to do something particular. In Figure \ref{fig:Use-Case-Diagram}
+explained that user can manipulate file and view file. User can add
+a file, test a file and delete file from database. User also can search
+a file in database.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.7]{Dia/usecase}
+\par\end{centering}
+
+\protect\caption{\label{fig:Use-Case-Diagram}Use Case Diagram of Dj}
+\end{figure}
+
+
+This application is intended for users who want to test keplagiatan
+a particular document lecturer programming and programmers.
+
+
+\subsubsection{\label{sub:Class-Diagram-Design}Class Diagram Design}
+
+A class diagram is a graphic presentation of the static view that
+shows a collection of declarative (static) model elements, such as
+classes, types, and their contents and relationships. A class diagram
+may show a view of a package and may contain symbols for nested packages.
+Class Diagram of Dj application described in Figure \ref{fig:Class-Diagram-of}.
+
+\begin{figure}[!tph]
+\includegraphics[scale=0.3]{\string"Dia/class Diagram\string".png}
+
+\protect\caption{\label{fig:Class-Diagram-of}Class Diagram of Dj}
+\end{figure}
+
+
+Figure\ref{fig:Class-Diagram-of} shows that there are 13 classes
+in this application. PlagiarismDetectionLD as a main class will call
+MainMenu class which is an interface class. As shown in Figure\ref{fig:Class-Diagram-of}
+arrows are directed from CheckPC class, CheckDB class and Processing
+class to MainMenu class, it means MainMenu class has a relation with
+them and also will call them to process file. When application try
+to add or delete new file in database, MainMenu class will interacting
+with Processing class which has interaction with ConnectDB class.
+When application try to check plagiarism or not a file from PC then
+MainMenu class will call CheckPC class, on the other hand MainMenu
+class will interacting with CheckDB class when application try to
+check file from Database (DB). While the steps described in Figure
+\ref{fig:Steps-in-Development} they are DeleteComment, Rename, Sorting
+and LevenshteinDistance are related to the Process class, which has
+interaction with CheckPC and CheckDB class. The last class is Video.java
+that has interaction with MainMenu class to show a short tutorial
+video.
+
+
+\subsection{\label{sub:Flowchart-Design}Flowchart Design}
+
+Figure \ref{fig:Flowchart-of-Dj} shows that the user will determine
+whether checking files from PC, checking files from Database, search
+file, or delete file. In checking the files either from a PC or a
+Database, the user must enter the threshold value. In conducting the
+search, the user enters the name or size of the files to be searched.
+When the user wants to delete the file, the user selects the file
+in the table. All those activities will be responded by the application
+by providing the results and display it in the table.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{Dia/flowchartUmum}
+\par\end{centering}
+
+\protect\caption{\label{fig:Flowchart-of-Dj}Flowchart of Dj}
+\end{figure}
+
+
+
+\subsection{\label{sub:Table-Structure}Table Structure}
+
+Table \ref{tab:Table-of-File} is a table that contains data in database
+used in Dj application, which is named pd\_table. It contains name
+field, size field and content field.
+
+\begin{table}[!tph]
+\protect\caption{\label{tab:Table-of-File}Table of File in Database}
+
+
+\centering{}%
+\begin{tabular}{|c|>{\centering}m{2cm}|c|>{\centering}m{6cm}|}
+\hline 
+No & Field Name  & Type & Comment\tabularnewline
+\hline 
+\hline 
+1. & name  & Varchar (30)  & Name of file either of source code or target code. It must be primary.\tabularnewline
+\hline 
+2. & size & Varchar (8)  & Size of source code and target code in bytes.\tabularnewline
+\hline 
+3. & content & Varchar (10000) & Content of source code and target code.\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+
+
+\section{\label{sec:Interface-Design}Interface Design}
+
+Interface design is a design that is made before the application is
+made. Interface design aims to simplify the process of making and
+development an application.
+
+
+\subsection{\label{sub:Main-Menu-Design}Main Menu Design}
+
+In the design of MainMenu class in this application there are a table,
+About button, Search button, Delete button and Refresh button. Besides,
+there is the menu bar named Check, Check menu bar contains two menu
+items they are fromPC and fromDB that will connect MainMenu class
+to the CheckPC class and CheckDB class as has been illustrated in
+Figure \ref{fig:Class-Diagram-of} Diagram Class.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.7]{\string"gambar ika/mockup1\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Design-of-Main}Design of Main Menu}
+
+
+\end{figure}
+
+
+The table in Figure \ref{fig:Design-of-Main} will display the file
+contained in the database that is the name and size, but the content
+of the file does not appear to maintain the neatness of the application,
+the button About contains information about the Dj application, the
+Search button used to do a searching of file on the table, the Delete
+button to delete file from table and database and the last is refresh
+button to refresh the application.
+
+
+\subsection{\label{sub:Checking-from-Personal}Checking from Personal Computer
+Design}
+
+Figure \ref{fig:Design-of-Checking} illustrates the display when
+the user want to check the value of plagiarism files from the PC.
+There are two Browse button to conduct a search of the Source Code
+and Target Code. User input the threshold value in the text field
+provided. Once the Process button is pressed, the content of Source
+Code and Target Code will be displayed on two Text Area, and the third
+Text Area will show the calculation result that will indicate whether
+the Target Code plagiarism or not.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.7]{\string"gambar ika/mockup2\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Design-of-Checking}Design of Checking from PC}
+\end{figure}
+
+
+
+\subsection{\label{sub:Checking-activity-from}Checking activity from Database
+Design}
+
+Checking from Database\textquoteright s design in Figure \ref{fig:Design-of-Checking-1}
+is not much different than the Checking from PC\textquoteright s design,
+the difference is the selection of Source Code and Target Code is
+not using Browse button but with combo box that will display the names
+of the files that have been stored in the database.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.7]{\string"gambar ika/mockup3\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Design-of-Checking-1}Design of Checking from DB}
+\end{figure}
+
+
+
+\chapter{Testing and Implementation}
+
+
+\section{\label{sec:Implementation}Implementation}
+
+Implementation stage consists of the stages that have been described
+previously in Chapter 3 into the program, database implementation
+and interface design implementation.
+
+
+\subsection{\label{sub:Database-Implementation}Database Implementation}
+
+In chapter Analysis and Design has discussed database design. The
+software used is XAMPP. In Figure \ref{fig:-Run-an} is shown the
+XAMPP control panel. In this control panel makes sure that Apache
+and MySQL are in the state of running.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{\string"gambar ika/implementasi/xampp\string".PNG}
+\par\end{centering}
+
+\protect\caption{\label{fig:-Run-an} Run an Apache and MySQL in XAMPP Control Panel}
+\end{figure}
+
+
+In Figure \ref{fig:Create-Database-using} is the phpMyAdmin page,
+where phpMyAdmin is used for create a database. Making the database
+can be done by selecting the Databases menu then input the name of
+the database that is plagiarism\_detection. Next create a table named
+pd\_table with code \textquotedblleft Create table (name varchar(30)
+NOT NULL, size varchar(8) NOT NULL, content varchar (10000) NOT NULL,
+PRIMARY KEY (name));\textquotedblright{}
+
+\begin{figure}[!tph]
+\includegraphics[scale=0.4]{\string"gambar ika/implementasi/phpMyAdmin\string".PNG}
+
+\centering{}\protect\caption{\label{fig:Create-Database-using}Create Database using phpMyAdmin}
+\end{figure}
+
+
+
+\subsection{\label{sub:Program-Implementation}Program Implementation}
+
+Program Implementation is done by coding in NetBeans. As already described
+in the previous chapter, this stage is divided into five steps they
+are Delete Comment, Rename All Words except Keywords, Sort Method
+by Size, Implementation of the Levenshtein Distance and Compare Result
+with Threshold.
+
+
+\subsubsection{\label{sub:Delete-Comment}Delete Comment}
+
+deleteComment method in Listing \ref{lis:Program-Implementation-of}will
+process contentFile1 and contentFile2 variable which type is String.
+ContentFile1 and contentFile2 are the content of the source code and
+the target code inputted or selected by the user. In List 4.1 fifth
+and sixth line are to eliminate the comments by searching for signs
+// and remove all that stands behind it or delete everything that
+is between the signs / {*} with {*} /.
+
+\begin{lstlisting}[caption={Program Implementation of Delete
+Comment},label={lis:Program-Implementation-of}]
+public String[] deleteComment (String contentFile1, String contentFile2) throws IOException
+{                      
+	content1 = contentFile1;              
+	content2 = contentFile2;              
+	content1=content1.replaceAll("(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)","");//use regex            
+	content2=content2.replaceAll("(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)","");                         
+	String files[] ={content1,content2};                       
+	return files; //return content of new file 1 and file 2     
+}
+\end{lstlisting}
+
+
+This deleteComment method returns a string array named files, which
+contains content1 and content2 which are the source code and the target
+code has no comment.
+
+
+\subsubsection{\label{sub:Rename-All-Words-1}Rename All Words except Keywords}
+
+In Listing \ref{lis:Rename-Words-except} there is a rename method
+that processes the file string array variable. This method has an
+array variable that contains a set of keywords in Java (Barry). file1
+and file2 string variable containing the source code and the target
+code that has been processed by the previous method in Listing \ref{lis:Program-Implementation-of}
+named deleteComment, then the file will be separated by a space using
+the code \char`\"{} .split (\char`\"{}\textbackslash{}\textbackslash{}
+s +\char`\"{}); \char`\"{}. The program will read the file and if
+it finds a word that is one of the keywords then written back directly
+to the newfile string variable but if the word is not the keywords
+it will be changed to \char`\"{}aa\char`\"{} and added to the variable
+newfile. 
+
+\begin{lstlisting}[caption={Rename Words except Keywords},label={lis:Rename-Words-except}]
+public String [] rename(String [] file){     
+	String keywords[]= {"abstract","assert","boolean","break","byte","case","catch","char","class","const","continue","default","do","double","else","enum","extends","final","finally","float","for","goto","if","implements","import","instanceof","int","interface","long","native","new","package","private","protected","public","return","short","static","strictfp","super","switch","synchronized","this","throw","throws","transient","try","void","volatile","while","const","goto","false","null","true","[","]","{","}","(",")","=",";","\\."," ","+","-",","};           
+	
+	file1=file[0];     
+	file2=file[1];       
+	String files1[]= file1.split("\\s+");  
+	String files2[]= file2.split("\\s+");
+	
+	for (int i=0;i<files2.length;i++){             
+		for (int j=0; j<keywords.length;j++ ){                 
+			if (files2[i].contains(keywords[j])){                      
+				newFile2=newFile2+" "+files2[i];                     
+				break;                 
+			}                 
+			if (j+1==keywords.length) {                                     
+				if(files2[i].matches("[(a-zA-Z.? )]*")){                         
+					files2[i]="aa";                         
+					newFile2=newFile2+" "+files2[i];                         
+					break;                      
+				}                 
+		}             
+	}         
+}
+\end{lstlisting}
+
+
+
+\subsubsection{\label{sub:Sort-by-Size-1}Sort by Size}
+
+SortFile method on the Listing \ref{lis:Collect-Curly-Brackets} process
+a newFile string variable in Listing \ref{lis:Rename-Words-except}.
+Listing \ref{lis:Collect-Curly-Brackets} will read a source file
+and target file character by character and when it finds \char`\"{}\{\char`\"{},
+the position of the sign will be stored on pos list as well as banyak
+variable will be added 1. Banyak variable aims to calculate how many
+\char`\"{}\{\char`\"{} in file. After reading the entire contents
+of the file and count all the \char`\"{}\{\char`\"{}, the program
+will look for pairs of each \char`\"{}\{\char`\"{} and write it on
+the posbaru list. postbaru will be processed further by Sorting2 class.
+
+\begin{lstlisting}[caption={Collect Curly Brackets},label={lis:Collect-Curly-Brackets}]
+public String  sortFile(String file){       
+	newFile=file;       
+	int i;       
+	String isiposbaru;       
+	List<Integer> pos = new ArrayList<Integer>();        
+	int banyak=0;        
+	for (i=0;i<newFile.length();i++){             
+		if (newFile.charAt(i)=='{'){                
+			banyak++; //to count how many { sign                 
+			pos.add(i);             
+		}          
+	}               
+	List<String> posbaru = new ArrayList<String>();       
+	StringBuffer sb = new StringBuffer();//for saving char between { and }         
+	for(i=1;i<pos.size()+1;i++){ // start from { in the rear                 
+		for ( int j=pos.get(pos.size() - i);j<newFile.length();j++){                    
+			sb.append(newFile.charAt(j));                     
+			if (newFile.charAt(j)=='}'){                         
+				isiposbaru=sb.toString();                         
+				posbaru.add(isiposbaru);                         
+				newFile=newFile.replace(isiposbaru, ""); //to delete all method from string file                        
+				 sb.delete(0, sb.length());//delete all element in string buffer sb                      
+				 break;                     
+			}            
+		}        
+	}                  
+	Sorting2 sorting2 = new Sorting2();         
+	String list = sorting2.sortingMethods(posbaru);        
+	return list;                
+}
+\end{lstlisting}
+
+
+compare method on the Listing \ref{lis:Sort-by-Size} is in a class
+Sorting2, this method will compare string1 which is a collection of
+code in a curly brackets with string2 which is also a collection of
+code in a curly brackets. This method returns zero if they are equal.
+It returns a positive value if string1 is greater than string2. Otherwise,
+a negative value is returned. 
+
+\begin{lstlisting}[caption={Sort by Size},label={lis:Sort-by-Size}]
+public int compare (String string1, String string2) {                         
+	return string2.length() - string1.length();        
+}
+\end{lstlisting}
+
+
+
+\subsubsection{\label{sub:Levenshtein-Distance-Implementat}Levenshtein Distance
+Implementation}
+
+Listing \ref{lis:Implementation-Levenshtein-Dista} is the implementation
+of the Levenshtein Distance algorithm to the Java language (rosettacode).
+Levenshtein Distance described in Chapter 3 will be converted into
+the Java language. It makes matrix with row is file1 and file2 as
+column.
+
+\begin{lstlisting}[caption={Implementation Levenshtein
+Distance},label={lis:Implementation-Levenshtein-Dista}]
+ public double levenshteinDistance(String [] file) {        
+	file1 = file[0];        
+	file2 = file[1];        
+	file1 = file1.toLowerCase();         
+	file2 = file2.toLowerCase();           
+	int [] costs = new int [file2.length() + 1];       
+	for (int j = 0; j < costs.length; j++)          
+		 costs[j] = j;       
+		 for (int i = 1; i <= file1.length(); i++) {           
+			costs[0] = i;            
+			int nw = i - 1;            
+			for (int j = 1; j <= file2.length(); j++) {   
+			//fill the matriks                
+			int cj = Math.min(1 + Math.min(costs[j], costs[j - 1]), file1.charAt(i - 1) == file2.charAt(j - 1) ? nw : nw + 1); 
+			// if same,then cj is min  (1 + Math.min(costs[j], costs[j - 1]),nw); else cj is min (1 + Math.min(costs[j], costs[j - 1]),nw+1);                 
+			nw = costs[j];                 
+			costs[j] = cj; //rewrite new array costs            
+		}       
+	 }         
+}
+\end{lstlisting}
+
+
+List \ref{lis:Implementation-Levenshtein-Dista} matches word in the
+column with the word in the line. If they match then put the value
+\textquotedblleft Above Left\textquotedblright{} cell in the matching
+cell. If they do not match then take minimum of three values and add
+1 to it. The three values will be from cell above, above left and
+left of current cell. \citet{Ahmad}.
+
+
+\subsubsection{\label{sub:Compare-with-a}Compare with a Threshold}
+
+Listing \ref{lis:Formula-of-Plagiarized} is the implementation of
+a program to process the result of the previous stage of implementation
+Levenshtein Distance. value variable in Listing \ref{lis:Formula-of-Plagiarized}
+will contain the result of the following formula:
+
+\begin{center}
+Plagiarized Value =$\left\{ 1-\frac{Diff}{Max(CS,ST}\right\} *100$
+\par\end{center}
+
+\begin{lstlisting}[caption={Formula of Plagiarized Value in
+Java},label={lis:Formula-of-Plagiarized}]
+double value = (1-((double)(costs[file2.length()])/Math.max(file1.length(), file2.length())))*100;         
+return value;
+\end{lstlisting}
+
+
+Result of the Listing \ref{lis:Formula-of-Plagiarized} is value variable,
+later will called as result. Then in Listing \ref{lis:Comparing-Result-with}
+will do a comparison between the result with a threshold which is
+a user input. If the result is greater than or equal to the threshold,
+the target code declared as plagiarism to the source code, if not
+then the target code does not commit plagiarism.
+
+\begin{lstlisting}[caption={Comparing Result with Threshold},label={lis:Comparing-Result-with}]
+if (result>=threshold){                     
+	jTextArea3.setText("Nilai Threshold yang dimasukkan: "+ threshold + " %" + "\nHasil yang didapat: "                         
+	+ (String.format("%.02f", result)) + " %" + "\n>> " + file1+ " melakukan "                         
+	+ "tindakan plagiarisme terhadap " + file2);                
+	}                 
+else {                     
+	jTextArea3.setText("Nilai Threshold yang dimasukkan: "+ threshold + " %" + "\nHasil yang didapat: "                        
+	+ (String.format("%.02f", result)) + " %" + "\n>> "+file1 + " tidak melakukan "                         
+	+ "tindakan plagiarisme terhadap " + file2);                
+}
+\end{lstlisting}
+
+
+
+\subsection{\label{sub:Interface-Design-Implementation}Interface Design Implementation}
+
+In the implementation of the interface will explain how the appearance
+of this application in accordance with the design that has been discussed
+in Chapter 3. The user interface consists of a main menu interface,
+check from pc interface and check from database interface, hereinafter
+referred to db. 
+
+In Figure \ref{fig:Old-Dj-Logo} is shown that the Dj (Detector of
+Java) application logo which consists of the Java language logo itself
+in the form of cup added with a signal representing detect action.
+However, after the redesign can be seen in Figure \ref{fig:Dj-Logo}
+Dj logo become the old logo with a disc which is used by DJ (Disc
+Jockey) as a characteristic of Dj word in general. 
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics{\string"gambar ika/implementasi/dj1\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Old-Dj-Logo}Old Dj Logo }
+\end{figure}
+
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics{\string"gambar ika/implementasi/dj\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Dj-Logo}Dj Logo}
+\end{figure}
+
+
+
+\subsubsection{\label{sub:Main-Menu-Interface}Main Menu Interface Design Implementation}
+
+In the main menu interface design implementation as shown in Figure
+\ref{fig:Main-Menu-Interface} is provided a table that contains the
+name and the size of the files that are stored in the database. In
+addition there is a Go to Check menu that consists of two items as
+in Figure \ref{fig:Main-Menu-Interface-1} they are From PC for personal
+computer and From DB for database, for each is useful as a bridge
+to get into the check from PC interface and check from DB interface.
+There are also a help, about, search, delete and refresh button in
+accordance with the interface design.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.7]{\string"gambar ika/implementasi/mainmenu1\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Main-Menu-Interface}Main Menu Interface Design Implementation}
+\end{figure}
+
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.7]{\string"gambar ika/implementasi/mainmenu2\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Main-Menu-Interface-1}Main Menu Interface Design Implementation}
+\end{figure}
+
+
+In Figure \ref{fig:Main-Menu-Interface-1}displayed a tooltip contained
+on Check From PC menu item. This Dj application equipped with a tooltip
+that aims to facilitate users to use this application.
+
+
+\subsubsection{\label{sub:Check-from-PC}Check from PC Interface Design Implementation}
+
+Interface Design of check from PC in Figure \ref{fig:Check-from-PC}
+in accordance with the previous design, which consists of two Browse
+button for user select the file to be tested. The name of each file
+will be displayed in the text field provided, while the third text
+field will be inputted by the user desired threshold value. When the
+Process button is clicked, contents both of file and the result will
+be displayed in the text area provided.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{\string"gambar ika/implementasi/dfrompc1\string".PNG}
+\par\end{centering}
+
+\protect\caption{\label{fig:Check-from-PC}Check from PC Interface Design Implementation}
+\end{figure}
+
+
+
+\subsubsection{\label{sub:Check-from-DB}Check from DB Interface Design Implementation}
+
+Check from DB Interface Design in Figure \ref{fig:Check-from-DB}
+in accordance with the previous design, which consists of two combo
+box that contain the name of files stored in the database, however
+the rest of the display is the same as check from PC interface design.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{\string"gambar ika/implementasi/dfromdb1\string".PNG}
+\par\end{centering}
+
+\protect\caption{\label{fig:Check-from-DB}Check from DB Interface Design Implementation}
+\end{figure}
+
+
+
+\section{\label{sec:Testing}Testing}
+
+Tests conducted on this application is the Black-Box testing method
+is to observe the result of the execution through the test data that
+focuses on functional requirements. The purpose of this test is to
+determine whether the application is running according to the function
+and find if there is an error in the application. 
+
+The data used in this test is word.java and word2.java \citet{Ahmad}are
+shown in Listing \ref{lis:Content-of-word.java} and Listing \ref{lis:Content-of-word1.java}. 
+
+\begin{lstlisting}[caption={Content of word.java as Source Code},label={lis:Content-of-word.java}]
+public class Word implements Comparable<Word>{ 	
+private String word; 
+	/** 	
+	* To change this template, choose Tools | Templates 	
+	* and open the template in the editor. 	
+	*/ 	
+	public Word(String str) { 		
+		this.word = str; 	
+	} 
+	public String toString() { 		
+		return word; 	
+	} 
+		
+	public boolean equals (Object other) { 		
+		if (this.compareTo((Word) other ==0) { 			
+			return true; 		
+		} else { 			
+			return false; 		
+		} 	
+	}
+
+	/** 	 
+	* Compute and return a hashcode for the word. 	 
+	* @return int hashcode 	
+	*/ 	
+
+	public int hashCode() {  		
+		int hc=0; 		
+		for ( int i=0;i<word.length();i++){ 			
+			char c = word.charAt(i); 			
+			hc += Character.getNumericValue(c); //ASCII number 		
+		} 		
+		return hc; 	
+	} 
+	/** 	
+	* Compares two words lexicographically 	 
+	* @param  	 
+	*/ 	 
+	public int compareTo(Word w) { 		
+		return (word.compareToIgnoreCase(w.word)); 	
+	} 
+} 	
+\end{lstlisting}
+
+
+\begin{lstlisting}[caption={Content of word1.java as Source
+Code},label={lis:Content-of-word1.java}]
+public class Word implements Comparable<Word>{ 
+	private String word; 
+	public Word(String str) { 		
+		word = str.toLowerCase(); 	
+	} 
+
+	public int hashCode() {  		
+		int hc=0; 		
+		for ( int i=0;i<word.length();i++){ 		
+			char c = word.charAt(i); 			
+			hc += Character.getNumericValue(c); //ASCII number 		
+		} 		
+		return hc; 
+	} 
+
+	public boolean equals (Object other) { 	
+		if (this.compareTo((Word) other ==0) { 		
+			return true; 	
+		} else { 		
+			return false; 		
+		} 	
+	} 
+
+	public int compareTo(Word w) { 		
+		return (word.compareToIgnoreCase(w.word)); 	
+	} 
+	
+	public String toString() { 	
+		return word; 	
+	} 		 
+}		 
+\end{lstlisting}
+
+
+In this scenario, word.java is the source code while word2.java is
+the target code. It can be seen clearly that word2.java in Listing
+\ref{lis:Content-of-word1.java} is plagiarism against word.java in
+Listing \ref{lis:Content-of-word.java}. Target code removes some
+of the comments and change some position methods. Tests performed
+on the source code and the target code in this Dj are checking files
+from pc then after files are stored in the database it will recheck
+same files from db. Other testing is a search and deletion of files
+as well as other additional features.
+
+
+\subsection{\label{sub:Check-From-PC}Check From PC Testing}
+
+This stage of testing was to determine whether the application can
+test the user-selected files from the PC located in local disk D.
+In Figure \ref{fig:Testing-of-Check} the application has display
+the content of the source code, the target code and the result of
+the calculation.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{\string"gambar ika/uji/ujiPC1\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Testing-of-Check}Testing of Check from PC feature}
+\end{figure}
+
+
+Based on Figure \ref{fig:Testing-of-Check} it can be concluded that
+the application can check plagiarism of files in PC. In Figure \ref{fig:word.java-and-word2.java}
+shows that files are already stored on the database so another conclusion
+is the application can save files that have been tested to the database
+used by application.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.7]{\string"gambar ika/uji/ujiPC2\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:word.java-and-word2.java}word.java and word2.java have
+saved in Database}
+\end{figure}
+
+
+
+\subsection{\label{sub:Check-From-DB}Check From DB Testing}
+
+This stage aims to determine whether the application is able to check
+the files that already exist in the database. In Figure \ref{fig:Testing-of-Check-1}
+application shows the content of word.java and word2.java from database
+and also the result of calculation.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{\string"gambar ika/uji/ujiDB\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Testing-of-Check-1}Testing of Check from DB feature}
+\end{figure}
+
+
+Based on Figure \ref{fig:Testing-of-Check-1} it can be concluded
+that the application can check files from DB and shows the content
+of both file as well as the result.
+
+
+\subsection{\label{sub:Search-File-Testing}Search File Testing}
+
+This test aims to determine whether the application is able to search
+files stored in a database and table. Figure \ref{fig:Testing-of-Search}
+shows that the application can find word2.java file that has been
+inputted in the text field provided.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{\string"gambar ika/uji/ujiSearch\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Testing-of-Search}Testing of Search File }
+\end{figure}
+
+
+The conclusion is the application able to search files that have been
+stored in a database and show this on the table as an active row,
+in other words the search feature goes well.
+
+
+\subsection{\label{sub:Delete-File-Testing}Delete File Testing}
+
+This stage aims to test whether the application can delete the file
+selected in table by the user from the database and table. The scenario
+in this test is to delete word2.java file, in Figure \ref{fig:Testing-of-Delete}
+shows that the file word2.java successfully removed from the table
+and in Figure \ref{fig:word2.java-have-Deleted} that word2.java file
+has been deleted from the database.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{\string"gambar ika/uji/ujiDelete1\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Testing-of-Delete}Testing of Delete File}
+\end{figure}
+
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.7]{\string"gambar ika/uji/ujiDelete2\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:word2.java-have-Deleted}word2.java have Deleted from Database}
+\end{figure}
+
+
+Based on Figure \ref{fig:Testing-of-Delete} and Figure \ref{fig:word2.java-have-Deleted}
+concluded that the delete feature in this application runs fine.
+
+
+\subsection{\label{sub:Other-Features-Testing}Other Features Testing}
+
+This test aims to determine whether the About and Help buttons work
+well. In Figure \ref{fig:About-Button-Testing} showing JOptionPane
+when About button executed, Figure \ref{fig:Help-Button-Testing}
+displays when the Help button is run and Figure \ref{fig:Two-Minutes-Tutorial-Video}
+displays Two-Minutes Tutorial Video found in Help Button can played.
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{\string"gambar ika/uji/ujiABOUT\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:About-Button-Testing}About Button Testing}
+\end{figure}
+
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{\string"gambar ika/uji/ujiHELP\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Help-Button-Testing}Help Button Testing}
+\end{figure}
+
+
+\begin{figure}[!tph]
+\begin{centering}
+\includegraphics[scale=0.5]{\string"gambar ika/uji/ujiVIDEO\string".png}
+\par\end{centering}
+
+\protect\caption{\label{fig:Two-Minutes-Tutorial-Video}Two-Minutes Tutorial Video
+Testing}
+\end{figure}
+
+
+Based on Figure \ref{fig:About-Button-Testing}, Figure \ref{fig:Help-Button-Testing}and
+Figure \ref{fig:Two-Minutes-Tutorial-Video}, it can be concluded
+that the About button, Help button and video tutorial can be run properly.
+
+
+\section{\label{sec:Functionality-Testing} Functionality Testing}
+
+The results of Dj application testing described in Table \ref{tab:Testing-Results}is
+testing of the features that are available and functional requirements
+of this application.
+
+\begin{table}[!tph]
+\protect\caption{\label{tab:Testing-Results}Testing Results}
+
+
+\centering{}%
+\begin{tabular*}{15cm}{@{\extracolsep{\fill}}|c|>{\raggedright}m{2cm}|>{\raggedright}m{4cm}|>{\raggedright}m{4cm}|>{\centering}p{1.5cm}|}
+\hline 
+No  & Test Case  & \centering{}Executed Procedures & \centering{}Expected Results  & Result\tabularnewline
+\hline 
+\hline 
+1. & \centering{}Check File from PC & \centering{}User select the source code and target code from PC then
+input the threshold value and click the Process button.  & \centering{}The application provides the percentage of the result
+and the statement whether the target code is plagiarism or not.  & Succeed\tabularnewline
+\hline 
+2. & \centering{}Check File from DB & \centering{}User select the source code and target code from the database
+then input the threshold and click the Process button. & \centering{}The application provides the percentage of the result
+and the statement whether the target code is plagiarism or not. & Succeed\tabularnewline
+\hline 
+3. & \centering{}Input Threshold & \centering{}When check files from PC or check files from DB, required
+threshold value. & \centering{}Users can input the threshold value in the text field
+provided & Succeed\tabularnewline
+\hline 
+4. & \centering{}Save file to Database  & \centering{}User try to check files from PC and click the Process
+button. & \centering{}Source code and target code will be saved to the database
+automatically. & Succeed\tabularnewline
+\hline 
+5 & \centering{}Show Content of File & \centering{}When user check files from PC or DB and click the Process
+button. & \centering{}Content of source code and target code is displayed on
+the text area provided. & Succeed\tabularnewline
+\hline 
+6. & \centering{}Search File & \centering{}Search File User input the name or size of the file in
+text field then click the Search button. & \centering{}The application shows the file is searched in the table. & Succeed\tabularnewline
+\hline 
+7. & \centering{}Delete File & \centering{}User choose the file to be deleted in the table and then
+click the Delete Button. & \centering{}File deleted from the database and tables. & Succeed\tabularnewline
+\hline 
+8. & \centering{}Watch Tutorial Video & \centering{}User clicks a Two-Minutes Tutorial Video button in Help
+Menu.  & \centering{}Two-Minutes Tutorial Video played & Succeed\tabularnewline
+\hline 
+\end{tabular*}
+\end{table}
+
+
+
+\section{\label{sec:User-Acceptance-Testing}User Acceptance Testing}
+
+User acceptance testing is perform by implementing the Likert scale
+in questionnaire completed by 10 respondents with the given question
+is about learnability, satisfaction and effectiveness of Dj application
+based on Consolidated and Normative Usability. \citep{Abran} or Table
+\ref{tab:Data-questionnaire-respondents} shows the questionnaire
+result. 
+
+\begin{table}[!tph]
+\protect\caption{\label{tab:Data-questionnaire-respondents}Data questionnaire respondents}
+
+
+\centering{}%
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+\multirow{2}{*}{Question} & \multicolumn{5}{c|}{Data}\tabularnewline
+\cline{2-6} 
+ & VA  & A  & N & D  & VD\tabularnewline
+\hline 
+1. & 2  & 7  & 1  & 0 & 0\tabularnewline
+\hline 
+2. & 7 & 3 & 0 & 0 & 0\tabularnewline
+\hline 
+3. & 1 & 8 & 1 & 0 & 0\tabularnewline
+\hline 
+4. & 2 & 7 & 1 & 0 & 0\tabularnewline
+\hline 
+5. & 3 & 7 & 0 & 0 & 0\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+
+After the data has been obtained, the data will be processed with
+the following analysis: Categories: 
+\begin{enumerate}
+\item VA = Very Agree, 5 points 
+\item A = Agree, 4 points 
+\item N = Neutral, 3 points 
+\item D = Disagree, 2 points 
+\item VD = Very Disagree, 1 point 
+\end{enumerate}
+\qquad{}Criterion score = highest score x number of questions x number
+of respondents = 5 x 5 x 10 = 250 
+
+Lowest score = lowest score x number of questions x number of respondents
+= 1 x 5 x 10 =50. 
+
+Total scores on data collection = 212. 
+
+Total class interval = (Criterion score - Lowest score) / number of
+categories = (250-50)/5 = 40 
+
+\begin{table}[!tph]
+
+
+\protect\caption{\label{tab:Classification-questionnaire-sco}Classification questionnaire
+scores expediency}
+
+
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+\hline 
+No & Total Scores  & Categories\tabularnewline
+\hline 
+\hline 
+1. & 210 -250  & Very Agree \tabularnewline
+\hline 
+2. & 170-209  & Agree \tabularnewline
+\hline 
+3. & 130-169  & Neutral \tabularnewline
+\hline 
+4. & 90-129 & Disagree \tabularnewline
+\hline 
+5. &  50-89  & Very Disagree \tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\end{table}
+
+
+The conclusion that can be drawn through the data processing and Table
+\ref{tab:Classification-questionnaire-sco}, the total score obtained
+by the respondent is included in Agree classification because it is
+located between 210 -250.
+
+
+\chapter{Conclusion}
+
+
+\section{\label{sec:Conclusion}Conclusion}
+
+From this study, it can be seen that the Dj has successfully implement
+the Levenshtein Distance algorithm in the application for detecting
+the similarity of the source code. It has developed using the Java
+language with the help of software Netbeans. A video tutorial and
+tooltip feature have help user in understanding Dj with easily. 
+
+Based on the user acceptance testing showed that the success rate
+of Dj application is 84.8\%. It can be concluded that the Dj suitable
+for use in detecting plagiarism in Java source code. A weakness of
+Dj is a video tutorial can only be played once each time Dj runs. 
+
+
+\section{\label{sec:Suggestion-and-Future}Suggestion and Future Work}
+
+An algorithm that used in this application still can be optimized
+in order to provide better result. Implement another algorithm like
+Damerau-Levenshtein Distance which is a development of Levenshtein
+distance, design an application works online, improve the existing
+GUI and the preprocessing stage can become material research for future
+work to get a better result.
+\begin{lyxcode}
+
+\end{lyxcode}
+\begin{onehalfspace}
+\bibliographystyle{apalike}
+\nocite{*}
+\bibliography{\string"Ika Pretty S\string"}
+
+\end{onehalfspace}
+
+\clearpage{}
+
+\appendix
+\begin{appendices}
+
+\renewcommand{\thechapter}{}
+\chapter{Chess Class Implementation}
+
+\begin{lstlisting}
+#include "Cell.h"
+#include "Chess.h"
+#include "ChessPiece.h"
+
+#include <vector>
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+//konstruktor
+Chess::Chess(){
+   Chess::row = 8;
+   Chess::column = 8;
+   Chess::loadChess();
+}
+
+//buat load chessboard
+void Chess::loadChess(){
+   int i, j, k = 0;
+   ChessPiece chesspiece;
+   for (i=0; i < row; i++){
+      for (j=0; j < column; j++){
+         //baris 0 dan 1
+         if (i<2) {
+            if (i==0){
+               if (j==0 || j==7){
+                  chesspiece.piece='R';
+               } else if (j==1 || j==6){
+                  chesspiece.piece='N';
+               } else if (j==2 || j==5){
+                  chesspiece.piece='B';
+               } else if (j==3){
+                  chesspiece.piece='Q';
+               } else {
+                  chesspiece.piece='K';
+               }
+            } else {
+               chesspiece.piece='P';
+            }
+            chesspiece.color=0;
+         //baris 2 sampai baris 5
+         } else if (i<6) {
+            chesspiece.piece='X';
+            chesspiece.color=9;
+         //baris 6 dan 7
+         } else {
+            if (i==6){
+               chesspiece.piece='P';
+            } else {
+               if (j==0 || j==7){
+                  chesspiece.piece='R';
+               } else if (j==1 || j==6){
+                  chesspiece.piece='N';
+               } else if (j==2 || j==5){
+                  chesspiece.piece='B';
+               } else if (j==3){
+                  chesspiece.piece='Q';
+               } else {
+                  chesspiece.piece='K';
+               }
+            }
+            chesspiece.color=1;
+         }
+         chesscell[i][j]=chesspiece;
+      }
+   }
+}
+
+//konversi posisi dari 0,0 jadi a,1
+string Chess::Position(Cell cell){
+   string position="";
+   char column;
+   char row;
+   switch (cell.column){
+   case 0:
+      column = 'a';
+      break;
+   case 1:
+      column = 'b';
+      break;
+   case 2:
+      column = 'c';
+      break;
+   case 3:
+      column = 'd';
+      break;
+   case 4:
+      column = 'e';
+      break;
+   case 5:
+      column = 'f';
+      break;
+   case 6:
+      column = 'g';
+      break;
+   case 7:
+      column = 'h';
+      break;
+   default:
+      cout << "bad column";
+   }
+   switch (cell.row){
+   case 0:
+      row = '8';
+      break;
+   case 1:
+      row = '7';
+      break;
+   case 2:
+      row = '6';
+      break;
+   case 3:
+      row = '5';
+      break;
+   case 4:
+      row = '4';
+      break;
+   case 5:
+      row = '3';
+      break;
+   case 6:
+      row = '2';
+      break;
+   case 7:
+      row = '1';
+      break;
+   default:
+      cout << "bad column";
+   }
+   position.push_back(column);
+   position.push_back(row);
+   return position;
+}
+
+//buat replace cell value
+void Chess::setChessCell(Cell cell, ChessPiece cp){
+   Chess::chesscell[cell.row][cell.column] = cp;
+}
+
+//buat replace cell value
+void Chess::setChessCell(int row, int column, ChessPiece cp){
+   Chess::chesscell[row][column] = cp;
+}
+
+//buat ambil value dari sebuah cell
+ChessPiece Chess::getChessCellValue(Cell cell){
+   return chesscell[cell.row][cell.column];
+}
+
+//buat ambil value dari sebuah cell
+ChessPiece Chess::getChessCellValue(int row, int column){
+   return chesscell[row][column];
+}
+
+//cetak chessboard
+void Chess::printChess(){
+   for (int i=0; i<8; i++){
+      for (int j=0; j<8; j++){
+         ChessPiece cp = Chess::getChessCellValue(i,j);
+         printf("[%c|%d] ", cp.piece, cp.color);
+      }
+      cout << "\n";
+   }
+}
+
+//set PGN in Short Algebraic Notation
+void Chess::setPGNotation(char piece, string mode1, string position, string mode2){
+   pgnotation += piece+mode1+position+mode2+" ";
+}
+
+//set PGN in Long Algebraic Notation type 1
+void Chess::setLongPGNotation(char piece, string mode1, string positiondeparture, string positiondestination, string mode2){
+   pgnotation += piece+positiondeparture+mode1+positiondestination+mode2+" ";
+}
+
+//set PGN in Long Algebraic Notation type 2
+void Chess::setLongPGNotation(string castling, string mode2){
+   pgnotation = castling+mode2+" ";
+}
+
+// get PGNotation
+string Chess::getPGNotation(){
+   return pgnotation;
+}
+
+//hapus PGNotation
+void Chess::clearPGNotation(){
+   pgnotation = "";
+}
+
+//menggerakkan chesspieces
+bool Chess::moveChessPiece(vector<Cell> movementcells, int turn){
+   if (movementcells.size()==4){
+      if (Chess::castlingMove(movementcells, turn)){
+         return true;
+      } else {
+         return false;
+      }
+   } else if (movementcells.size()==3){
+      if (Chess::enpassantMove(movementcells, turn)){
+         return true;
+      } else {
+         return false;
+      }
+   } else if (movementcells.size()==2){
+      Chess::normalMove(movementcells, turn);
+      return true;
+   } else {
+      return false;
+   }
+}
+
+bool Chess::enpassantMove(vector<Cell> movementcells, int turn){
+   ChessPiece blankChessPiece;
+   ChessPiece cp1, cp2, cp3;
+   Cell cell1, cell2, cell3;
+   blankChessPiece.piece='X';
+   blankChessPiece.color=9;
+   string mode1, mode2;
+   
+   bool enpassant = false;
+
+   //misahin cell sejajar horizontal dan yang lainnya
+   //yang sejajar horizontal adalah asal dari pergerakan
+   if (movementcells[0].row == movementcells[1].row){
+      cell1 = movementcells[0];
+      cell2 = movementcells[1];
+      cell3 = movementcells[2];
+   } else if (movementcells[0].row == movementcells[2].row){
+      cell1 = movementcells[0];
+      cell2 = movementcells[2];
+      cell3 = movementcells[1];
+   } else {
+      cell1 = movementcells[1];
+      cell2 = movementcells[2];
+      cell3 = movementcells[0];
+   }
+
+   cp1 = Chess::getChessCellValue(cell1);
+   cp2 = Chess::getChessCellValue(cell2);
+   cp3 = Chess::getChessCellValue(cell3);
+   if ( cp1.piece =='P' && cp2.piece =='P' && cp3.piece =='X' ) {
+      enpassant = true;
+   }
+
+   //cek enpassant
+   if(enpassant){
+
+      cout << "\nEn Passant Process..... En Passant Formation" << endl;
+      //kalau warna isi dari cell sama dengan turn (giliran) maka departurenya cell1 (cp1)
+      //beda dengan normal moves, ini destinasinya ke cell3
+      if(cp1.color == (turn%2)){
+
+         //en-passant hanya boleh dilakukan di rank ke 5
+         //berarti kalo putih departurnya harus dari row 5
+         //kalo hitam departurenya harus dari row 4
+         if( (cp1.color == 1 && cell1.row == 3) || (cp1.color == 0 && cell1.row == 4)){
+            cout << "En Passant Process..... Departure Cell in proper row\n" << endl;
+            printf("cell departure\t\t= [%d,%d]\t\t= [%c|%d]\ncell destinasi\t\t= [%d,%d]\t\t= [%c|%d]\ncell yang dimakan\t= [%d,%d]\t\t= [%c|%d]\n",
+                  cell1.row, cell1.column, cp1.piece, cp1.color,
+                  cell3.row, cell3.column, cp3.piece, cp3.color,
+                  cell2.row, cell2.column, cp2.piece, cp2.color);
+
+            //en-passant memang gerakan makan
+            mode1='x';
+            //cell3 merupakan destination, maka harus ditiban isinya dengan isi dari cell departure (cell1/cp1)
+            Chess::setChessCell(cell3, cp1);
+            //karena cp di cell1 udah pindah, maka isinya jadi kosong
+            Chess::setChessCell(cell1, blankChessPiece);
+            //karena cp di cell2 udah dimakan, maka isinya jadi kosong
+            Chess::setChessCell(cell2, blankChessPiece);
+
+            //cek skak dari cell destination
+            if (Chess::Check(cell3)) {
+               cout << "(skak) ";
+               mode2="+";
+            }
+      
+            Chess::setLongPGNotation(cp1.piece, mode1, Chess::Position(cell1), Chess::Position(cell3), "e.p."+mode2);
+            return true;
+         } else {
+            //belum tentu, siapa tau kebalik susunannya
+            //do nothing
+         }
+
+      //kalau ga terpenuhi maka departurenya cell2 (cp2)
+      //beda dengan normal moves, ini destinasinya ke cell3
+      } else {
+         //en-passant hanya boleh dilakukan di rank ke 5
+         //berarti kalo putih departurnya harus dari row 5
+         //kalo hitam departurenya harus dari row 4
+         if( (cp1.color == 1 && cell1.row == 3) || (cp1.color == 0 && cell1.row == 4)){
+            cout << "En Passant Process..... Departure Cell in proper row\n" << endl;
+            printf("cell departure\t\t= [%d,%d]\t\t= [%c|%d]\ncell destinasi\t\t= [%d,%d]\t\t= [%c|%d]\ncell yang dimakan\t= [%d,%d]\t\t= [%c|%d]\n",
+                     cell2.row, cell2.column, cp2.piece, cp2.color,
+                     cell3.row, cell3.column, cp3.piece, cp3.color,
+                     cell1.row, cell1.column, cp1.piece, cp1.color);
+
+            //en-passant memang gerakan makan
+            mode1='x';
+            //cell3 merupakan destination, maka harus ditiban isinya dengan isi dari cell departure (cell2/cp2)
+            Chess::setChessCell(cell3, cp2);
+            //karena cp di cell2 udah pindah, maka isinya jadi kosong
+            Chess::setChessCell(cell2, blankChessPiece);
+            //karena cp di cell1 udah dimakan, maka isinya jadi kosong
+            Chess::setChessCell(cell1, blankChessPiece);
+
+            //cek skak dari cell destination
+            if (Chess::Check(cell3)) {
+               cout << "(skak) ";
+               mode2="+";
+            }
+      
+            Chess::setLongPGNotation(cp2.piece, mode1, Chess::Position(cell2), Chess::Position(cell3), "e.p."+mode2);
+            return true;
+         } else {
+            return false;
+         }
+      }
+
+   //kalo formasi cell bukan formasi en-passant
+   //berarti bukan en-passant movement
+   } else {
+      return false;
+   }
+}
+
+//menggerakkan castling move
+bool Chess::castlingMove(vector<Cell> movementcells, int turn){
+   ChessPiece cp1, cp2, cp3;
+   ChessPiece blankChessPiece;
+   Cell destinationking, destinationrook;
+   Cell departureking, departurerook;
+   blankChessPiece.piece='X';
+   blankChessPiece.color=9;
+   string mode2;
+   bool onerow = true;
+
+   for (int i=0; i<movementcells.size(); i++){
+      if ((turn%2)==0) {
+         if (movementcells[i].row!=0) {
+            onerow=false;
+            break;
+         }
+      } else {
+         if (movementcells[i].row!=7) {
+            onerow=false;
+            break;
+         }
+      }
+   }
+
+   //kalau 1 baris
+   if(onerow){
+      cout << "\nCastling Process..... All in one row 0 or 7" << endl;
+      //cari dimana king
+      bool kingcastling = false;
+      for (int i=0; i<movementcells.size(); i++){
+         cp1 = Chess::getChessCellValue(movementcells[i].row, movementcells[i].column);
+
+         //kalo king
+         if (cp1.piece=='K'){
+            cout << "Castling Process..... King found" << endl;
+            //kalo di column 4
+            if(movementcells[i].column==4){
+               cout << "Castling Process..... King in the proper cell" << endl;
+               //berarti king bisa castling
+               kingcastling = true;
+               //catat asal king ada dimana
+               departureking = movementcells[i];
+               break;
+            }
+         }
+      }
+
+      //kalau king bisa castling
+      if(kingcastling){
+         //cari dimana rook
+         int rookcastling = 0;
+         for (int i=0; i<movementcells.size(); i++){
+            cp2 = Chess::getChessCellValue(movementcells[i].row, movementcells[i].column);
+            //kalo rook
+            if (cp2.piece=='R'){
+               cout << "Castling Process..... Rook found" << endl;
+
+               //kalo di column 0
+               if (movementcells[i].column==0){
+                  cout << "Castling Process..... Rook in the proper cell" << endl;
+                  cout << "Castling Process..... Rook and King can do Queenside Castling" << endl;
+                  //berarti queenside castling
+                  rookcastling = 1;
+                  //catat asal rook ada dimana
+                  departurerook = movementcells[i];
+                  break;
+
+               } else if (movementcells[i].column==7){
+                  cout << "Castling Process..... Rook in the proper cell" << endl;
+                  cout << "Castling Process..... Rook and King can do Kingside Castling" << endl;
+                  //berarti kingside castling
+                  rookcastling = 2;
+                  //catat asal rook ada dimana
+                  departurerook = movementcells[i];
+                  break;
+
+               } else {
+                  //berarti salah
+                  rookcastling = 0;
+                  break;
+               }
+            }
+         }
+
+         //kalau rook bisa queenside castling
+         if(rookcastling == 1){
+            //cek bener ga yang lainnya empty
+            int totalempty = 0;
+            for (int i=0; i<movementcells.size(); i++){
+               cp3 = Chess::getChessCellValue(movementcells[i].row, movementcells[i].column);
+
+               //kalo kosong
+               if (cp3.piece == 'X'){
+                  //kalo kosongnya di kolom 2 dan 3 queenside castling dapat dilakukan
+                  if (movementcells[i].column==2){
+                     //catat tujuan king
+                     destinationking = movementcells[i];
+                     totalempty++;
+                  } else if (movementcells[i].column==3){
+                     //catat tujuan rook
+                     destinationrook = movementcells[i];
+                     totalempty++;
+                  }
+               }
+            }
+
+            //kalo 2 cell lainnya kosong berarti bisa queenside castling
+            if (totalempty == 2){
+               cout << "Castling Process..... Destination rows are empty" << endl;
+               cout << "Castling Process..... Performing Queenside Castling" << endl;
+
+               //saatnya replace2 value
+               Chess::setChessCell(destinationking, Chess::getChessCellValue(departureking));
+               Chess::setChessCell(destinationrook, Chess::getChessCellValue(departurerook));
+
+               //yang udah pindah di replace blank value
+               Chess::setChessCell(departureking, blankChessPiece);
+               Chess::setChessCell(departurerook, blankChessPiece);
+
+               if (Chess::Check(destinationrook)) {
+                  cout << "(skak) ";
+                  mode2="+";
+               }
+               Chess::setLongPGNotation("O-O-O", mode2);
+               return true;
+            }
+
+         //kalau rook bisa kingside castling
+         } else if (rookcastling == 2) {
+            //cek bener ga yang lainnya empty
+            int totalempty = 0;
+            for (int i=0; i<movementcells.size(); i++){
+               cp3 = Chess::getChessCellValue(movementcells[i].row, movementcells[i].column);
+
+               //kalo kosong
+               if (cp3.piece == 'X'){
+                  //kalo kosongnya di kolom 2 dan 3 queenside castling dapat dilakukan
+                  if (movementcells[i].column==5){
+                     //catat tujuan rook
+                     destinationrook = movementcells[i];
+                     totalempty++;
+                  } else if (movementcells[i].column==6){
+                     //catat tujuan king
+                     destinationking = movementcells[i];
+                     totalempty++;
+                  }
+               }
+            }
+
+            //kalo 2 cell lainnya kosong berarti bisa queenside castling
+            if (totalempty == 2){
+               cout << "Castling Process..... Destination rows are empty" << endl;
+               cout << "Castling Process..... Performing Kingside Castling" << endl;
+
+               //saatnya replace2 value
+               Chess::setChessCell(destinationking, Chess::getChessCellValue(departureking));
+               Chess::setChessCell(destinationrook, Chess::getChessCellValue(departurerook));
+               //yang udah pindah di replace blank value
+               Chess::setChessCell(departureking, blankChessPiece);
+               Chess::setChessCell(departurerook, blankChessPiece);
+
+               if (Chess::Check(destinationrook)) {
+                  cout << "(skak) ";
+                  mode2="+";
+               }
+
+               Chess::setLongPGNotation("O-O", mode2);
+               return true;
+            }
+
+         //kalo rook ga berada ditempatnya atau ada ga ada rook
+         //berarti bukan gerakan castling
+         } else {
+            return false;
+         }
+
+      //kalo king ga berada ditempatnya atau ga ada king
+      //berarti bukan gerakan castling
+      } else {
+         return false;
+      }
+   
+   //kalo bukan satu baris gerakannya (di 0 atau 7)
+   //berarti bukan gerakan castling
+   } else {
+      return false;
+   }
+}
+
+//menggerakan normal move
+void Chess::normalMove(vector<Cell> movementcells, int turn){
+   Cell cell1 = movementcells[0];
+   Cell cell2 = movementcells[1];
+   ChessPiece cp1 = Chess::getChessCellValue(cell1);
+   ChessPiece cp2 = Chess::getChessCellValue(cell2);
+   ChessPiece blankChessPiece;
+   string mode1, mode2;
+   blankChessPiece.piece='X';
+   blankChessPiece.color=9;
+
+   //kalau warna isi dari cell sama dengan turn (giliran) maka cell destination nya cell2, cell departurenya cell1
+   if (cp1.color == (turn%2)){
+
+      printf("cell departure\t\t= [%d,%d]\t\t= [%c|%d]\ncell destinasi\t\t= [%d,%d]\t\t= [%c|%d]\n",
+         cell1.row, cell1.column, cp1.piece, cp1.color,
+         cell2.row, cell2.column, cp2.piece, cp2.color);
+
+      //kalau cell destination nya ada isinya (bukan X), maka tandanya makan;
+      if (cp2.piece != 'X'){
+         cout << "(makan) ";
+         mode1 = "x";
+      } else {
+         mode1 = "-";
+      }
+
+      //cell2 merupakan destination, maka harus ditiban isinya dengan isi dari cell departure
+      Chess::setChessCell(cell2, cp1);
+      //karena cp di cell1 udah pindah, maka isinya jadi kosong
+      Chess::setChessCell(cell1, blankChessPiece);
+
+      if (Chess::Check(cell2)) {
+         cout << "(skak) ";
+         mode2="+";
+      }
+      
+      Chess::setLongPGNotation(cp1.piece, mode1, Chess::Position(cell1), Chess::Position(cell2), mode2);
+      
+   //kalau ga terpenuhi maka cell destination nya cell1, cell departurenya cell2
+   } else {
+      printf("cell departure\t\t= [%d,%d]\t\t= [%c|%d]\ncell destinasi\t\t= [%d,%d]\t\t= [%c|%d]\n",
+         cell2.row, cell2.column, cp2.piece, cp2.color,
+         cell1.row, cell1.column, cp1.piece, cp1.color);
+
+      //kalau cell destination nya ada isinya (bukan x), maka tandanya makan;
+      if (cp1.piece != 'X'){
+         cout << "(makan) ";
+         mode1="x";
+      } else {
+         mode1 = "-";
+      }
+
+      //cell2 merupakan destination, maka harus ditiban isinya dengan isi dari cell departure
+      Chess::setChessCell(cell1, cp2);
+      //karena cp di cell1 udah pindah, maka isinya jadi kosong
+      Chess::setChessCell(cell2, blankChessPiece);
+      if (Chess::Check(cell1)) {
+         cout << "(skak) ";
+         mode2="+";
+      }
+      
+      Chess::setLongPGNotation(cp2.piece, mode1, Chess::Position(cell2), Chess::Position(cell1), mode2);
+   }
+}
+
+//bahan buat method check
+bool Chess::innerCell(int row, int column){
+   if (row < 0 || column > 7){
+      return false;
+   } else {
+      return true;
+   }
+}
+
+//buat periksa check
+bool Chess::Check(Cell cell){
+   ChessPiece chesspiece = Chess::getChessCellValue(cell.row, cell.column);
+   //ruang skak pion
+   if (chesspiece.piece == 'P'){
+      if (Chess::innerCell(cell.row-1, cell.column-1) &&
+         Chess::getChessCellValue(cell.row-1, cell.column-1).piece=='K' &&
+         Chess::getChessCellValue(cell.row-1, cell.column-1).color!=chesspiece.color){
+         return true;
+      } else if (Chess::innerCell(cell.row-1, cell.column+1) &&
+         Chess::getChessCellValue(cell.row-1, cell.column+1).piece=='K' &&
+         Chess::getChessCellValue(cell.row-1, cell.column+1).color!=chesspiece.color){
+         return true;
+      } else if (Chess::innerCell(cell.row+1, cell.column+1) &&
+         Chess::getChessCellValue(cell.row+1, cell.column+1).piece=='K' &&
+         Chess::getChessCellValue(cell.row+1, cell.column+1).color!=chesspiece.color){
+         return true;
+      }  else if (Chess::innerCell(cell.row+1, cell.column-1) &&
+         Chess::getChessCellValue(cell.row+1, cell.column-1).piece=='K' &&
+         Chess::getChessCellValue(cell.row+1, cell.column-1).color!=chesspiece.color){
+         return true;
+      } else {
+         return false;
+      }
+
+   //ruang skak benteng
+   } else if (chesspiece.piece == 'R'){
+      //atas
+      int i=1;
+      while(Chess::innerCell(cell.row-i, cell.column)){
+         if ( Chess::getChessCellValue(cell.row-i, cell.column).piece!='X' ) {
+            if( Chess::getChessCellValue(cell.row-i, cell.column).piece=='K' && 
+               Chess::getChessCellValue(cell.row-i, cell.column).color!=chesspiece.color){
+                  return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //kanan
+      i=1;
+      while(Chess::innerCell(cell.row, cell.column+i)){
+         if( Chess::getChessCellValue(cell.row, cell.column+i).piece!='X' ) {
+            if( Chess::getChessCellValue(cell.row, cell.column+i).piece=='K' && 
+               Chess::getChessCellValue(cell.row, cell.column+i).color!=chesspiece.color){
+                  return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //bawah
+      i=1;
+      while(Chess::innerCell(cell.row+i, cell.column)){
+         if( Chess::getChessCellValue(cell.row+i, cell.column).piece!='X' ) {
+            if( Chess::getChessCellValue(cell.row+i, cell.column).piece=='K' && 
+               Chess::getChessCellValue(cell.row+i, cell.column).color!=chesspiece.color){
+                  return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //kiri
+      i=1;
+      while(Chess::innerCell(cell.row, cell.column-i)){
+         if( Chess::getChessCellValue(cell.row, cell.column-i).piece!='X' ) {
+            if( Chess::getChessCellValue(cell.row, cell.column-i).piece=='K' && 
+               Chess::getChessCellValue(cell.row, cell.column-i).color!=chesspiece.color){
+                  return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+      return false;
+
+   //ruang skak kuda
+   } else if (chesspiece.piece == 'N'){
+      if (Chess::innerCell(cell.row-2, cell.column+1) &&
+         Chess::getChessCellValue(cell.row-2, cell.column+1).piece=='K' &&
+         Chess::getChessCellValue(cell.row-2, cell.column+1).color!=chesspiece.color){
+         return true;
+      } else if (Chess::innerCell(cell.row-1, cell.column+2) &&
+         Chess::getChessCellValue(cell.row-1, cell.column+2).piece=='K' &&
+         Chess::getChessCellValue(cell.row-1, cell.column+2).color!=chesspiece.color){
+         return true;
+      } else if (Chess::innerCell(cell.row+1, cell.column+2) &&
+         Chess::getChessCellValue(cell.row+1, cell.column+2).piece=='K' &&
+         Chess::getChessCellValue(cell.row+1, cell.column+2).color!=chesspiece.color){
+         return true;
+      } else if (Chess::innerCell(cell.row+2, cell.column+1) &&
+         Chess::getChessCellValue(cell.row+2, cell.column+1).piece=='K' &&
+         Chess::getChessCellValue(cell.row+2, cell.column+1).color!=chesspiece.color){
+         return true;
+      } else if (Chess::innerCell(cell.row+2, cell.column-1) &&
+         Chess::getChessCellValue(cell.row+2, cell.column-1).piece=='K' &&
+         Chess::getChessCellValue(cell.row+2, cell.column-1).color!=chesspiece.color){
+         return true;
+      } else if (Chess::innerCell(cell.row+1, cell.column-2) &&
+         Chess::getChessCellValue(cell.row+1, cell.column-2).piece=='K' &&
+         Chess::getChessCellValue(cell.row+1, cell.column-2).color!=chesspiece.color){
+         return true;
+      } else if (Chess::innerCell(cell.row-1, cell.column+2) &&
+         Chess::getChessCellValue(cell.row-1, cell.column-1).piece=='K' &&
+         Chess::getChessCellValue(cell.row-1, cell.column-1).piece!=chesspiece.color){
+         return true;
+      }  else if (Chess::innerCell(cell.row-2, cell.column-1) &&
+         Chess::getChessCellValue(cell.row-2, cell.column-1).piece=='K' &&
+         Chess::getChessCellValue(cell.row-2, cell.column-1).color!=chesspiece.color){
+         return true;
+      } else {
+         return false;
+      }
+
+   } else if (chesspiece.piece == 'B'){
+      //serong kanan atas
+      int i=1;
+      while(Chess::innerCell(cell.row-i, cell.column+i)){
+         if( Chess::getChessCellValue(cell.row-i, cell.column+i).piece!='X') {
+            if( Chess::getChessCellValue(cell.row-i, cell.column+i).piece=='K' &&
+               Chess::getChessCellValue(cell.row-i, cell.column+i).color!=chesspiece.color){
+               return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //serong kanan bawah
+      i=1;
+      while(Chess::innerCell(cell.row+i, cell.column+i)){
+         if( Chess::getChessCellValue(cell.row+i, cell.column+i).piece!='X' ) {
+            if( Chess::getChessCellValue(cell.row+i, cell.column+i).piece=='K' &&
+               Chess::getChessCellValue(cell.row+i, cell.column+i).color!=chesspiece.color){
+               return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //serong kiri bawah
+      i=1;
+      while(Chess::innerCell(cell.row+i, cell.column-i)){
+         if( Chess::getChessCellValue(cell.row+i, cell.column-i).piece!='X') {
+            if( Chess::getChessCellValue(cell.row+i, cell.column-i).piece=='K' &&
+               Chess::getChessCellValue(cell.row+i, cell.column-i).color!=chesspiece.color){
+               return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //serong kiri atas
+      i=1;
+      while(Chess::innerCell(cell.row-i, cell.column-i)){
+         if( Chess::getChessCellValue(cell.row-i, cell.column-i).piece!='X') {
+            if( Chess::getChessCellValue(cell.row-i, cell.column-i).piece=='K' &&
+               Chess::getChessCellValue(cell.row-i, cell.column-i).color!=chesspiece.color){
+               return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+      return false;
+
+   } else if (chesspiece.piece == 'Q'){
+      //atas
+      int i=1;
+      while(Chess::innerCell(cell.row-i, cell.column)){
+         if ( Chess::getChessCellValue(cell.row-i, cell.column).piece!='X' ) {
+            if( Chess::getChessCellValue(cell.row-i, cell.column).piece=='K' && 
+               Chess::getChessCellValue(cell.row-i, cell.column).color!=chesspiece.color){
+                  return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //kanan
+      i=1;
+      while(Chess::innerCell(cell.row, cell.column+i)){
+         if( Chess::getChessCellValue(cell.row, cell.column+i).piece!='X' ) {
+            if( Chess::getChessCellValue(cell.row, cell.column+i).piece=='K' && 
+               Chess::getChessCellValue(cell.row, cell.column+i).color!=chesspiece.color){
+                  return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //bawah
+      i=1;
+      while(Chess::innerCell(cell.row+i, cell.column)){
+         if( Chess::getChessCellValue(cell.row+i, cell.column).piece!='X' ) {
+            if( Chess::getChessCellValue(cell.row+i, cell.column).piece=='K' && 
+               Chess::getChessCellValue(cell.row+i, cell.column).color!=chesspiece.color){
+                  return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //kiri
+      i=1;
+      while(Chess::innerCell(cell.row, cell.column-i)){
+         if( Chess::getChessCellValue(cell.row, cell.column-i).piece!='X' ) {
+            if( Chess::getChessCellValue(cell.row, cell.column-i).piece=='K' && 
+               Chess::getChessCellValue(cell.row, cell.column-i).color!=chesspiece.color){
+                  return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //serong kanan atas
+      i=1;
+      while(Chess::innerCell(cell.row-i, cell.column+i)){
+         if( Chess::getChessCellValue(cell.row-i, cell.column+i).piece!='X') {
+            if( Chess::getChessCellValue(cell.row-i, cell.column+i).piece=='K' &&
+               Chess::getChessCellValue(cell.row-i, cell.column+i).color!=chesspiece.color){
+               return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //serong kanan bawah
+      i=1;
+      while(Chess::innerCell(cell.row+i, cell.column+i)){
+         if( Chess::getChessCellValue(cell.row+i, cell.column+i).piece!='X' ) {
+            if( Chess::getChessCellValue(cell.row+i, cell.column+i).piece=='K' &&
+               Chess::getChessCellValue(cell.row+i, cell.column+i).color!=chesspiece.color){
+               return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //serong kiri bawah
+      i=1;
+      while(Chess::innerCell(cell.row+i, cell.column-i)){
+         if( Chess::getChessCellValue(cell.row+i, cell.column-i).piece!='X') {
+            if( Chess::getChessCellValue(cell.row+i, cell.column-i).piece=='K' &&
+               Chess::getChessCellValue(cell.row+i, cell.column-i).color!=chesspiece.color){
+               return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+
+      //serong kiri atas
+      i=1;
+      while(Chess::innerCell(cell.row-i, cell.column-i)){
+         if( Chess::getChessCellValue(cell.row-i, cell.column-i).piece!='X') {
+            if( Chess::getChessCellValue(cell.row-i, cell.column-i).piece=='K' &&
+               Chess::getChessCellValue(cell.row-i, cell.column-i).color!=chesspiece.color){
+               return true;
+            } else {
+               break;
+            }
+         }
+         i++;
+      }
+      return false;
+   }
+}
+\end{lstlisting}
+
+
+\end{appendices}
+\end{document}
